@@ -14,7 +14,7 @@
 <meta property="og:description" content="A single assistant replaces a dozen services: text, images, music, video, voice and advertising are produced and distributed in one workflow.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=5fecaead">
+<link rel="stylesheet" href="styles.css?v=456695d9">
 <script src="assets/iconsax.js?v=e8960c15" defer></script>
 <script src="app.js?v=eaefdb6f" defer></script>
 </head>
@@ -93,10 +93,12 @@
 
 <main style="max-width: var(--max); margin: 0 auto;">
 <section class="hero-grid" style="padding: clamp(56px, 8vw, 108px) 0 0;">
-  <div data-reveal>
+  <div class="hero-copy" data-reveal>
     <h1 style="margin: 0; font-size: clamp(36px, 6.4vw, 76px); line-height: 0.98; font-weight: 500; letter-spacing: -0.036em; max-width: 17ch; text-wrap: pretty;">One assistant. Every format. <span style="color: var(--accent);">One workflow.</span></h1>
     <p style="margin: 24px 0 0; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.58; color: #9A9793; max-width: 46ch; text-wrap: pretty;">A single assistant replaces a dozen services: text, images, music, video, voice and advertising are produced and distributed in one workflow.</p>
-    <div style="position: relative; margin: clamp(28px, 4vw, 44px) 0 0;">
+  </div>
+
+  <div class="hero-composer" data-reveal style="position: relative;">
       <div class="shine" style="position: relative; border-radius: 24px; padding: clamp(18px, 2.4vw, 26px); display: flex; flex-direction: column; gap: clamp(24px, 3vw, 40px); min-height: 190px;">
         <div style="position: relative;">
           <div data-ghost style="position: absolute; inset: 0; pointer-events: none; display: flex; align-items: flex-start; font-size: 20px; line-height: 1.4; letter-spacing: -0.018em; color: #8B8884;">
@@ -139,9 +141,8 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div data-reveal data-delay="1" style="position: relative; height: 100%; min-height: clamp(300px, 52vw, 480px);">
+  <div class="hero-media" data-reveal data-delay="1" style="position: relative; height: 100%; min-height: clamp(300px, 52vw, 480px);">
     <div style="position: absolute; inset: 0; border-radius: 24px; overflow: hidden; background: #060606;">
       <jggl-media data-hero-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Image" fit="cover"></jggl-media>
     </div>
