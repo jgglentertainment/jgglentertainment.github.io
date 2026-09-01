@@ -149,8 +149,8 @@ const hero = `<section class="hero-grid" style="padding: clamp(56px, 8vw, 108px)
           </div>
           <textarea data-composer rows="3" placeholder="" aria-label="Describe what you want to create" style="display: block; width: 100%; min-height: 84px; resize: none; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 20px; line-height: 1.4; letter-spacing: -0.018em; color: #F2F2F0; padding: 0; caret-color: var(--accent);"></textarea>
         </div>
-        <div style="margin-top: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
-          <div style="position: relative;">
+        <div class="composer-actions" style="margin-top: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div class="fmt-wrap" style="position: relative;">
             <button data-fmt-toggle aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center; gap: 10px; font-family: inherit; font-size: 15px; padding: 11px 18px; border-radius: 999px; cursor: pointer; background: #171614; color: #F2F2F0; border: 1px solid #2A2825;">
               <span data-active-icon style="color: var(--accent); display: flex;"><isax-icon name="${fmt.icon}" size="16"></isax-icon></span>
               <span data-active-label>${esc(fmt.label)}</span>
