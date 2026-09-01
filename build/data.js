@@ -10,11 +10,12 @@ const FORMATS = [
   { label: 'Image', icon: 'gallery',       ph: 'Build a moodboard for an autumn campaign',      media: 'https://jggl.ai/images/app/authors-grid.webp' },
   { label: 'Video', icon: 'video',         ph: 'Assemble a reel from the track and three stills', media: 'https://jggl.ai/images/app/feed-mockup-mobile.webp' },
   { label: 'Voice', icon: 'microphone-2',  ph: 'Read the caption in my cloned voice',           media: 'https://jggl.ai/images/app/voice-cloning.webp' },
-  { label: 'Ads',   icon: 'trend-up',      ph: 'Promote this post to a 25–34 audience',         media: 'https://jggl.ai/images/app/chats-reference-bg.webp' }
+  { label: 'Ads',   icon: 'trend-up',      ph: 'Promote this post to a 25–34 audience',         media: 'https://jggl.ai/images/app/web3-globe.webp' }
 ];
 
-/* Which formats get a thumbnail under the hero media. */
-const THUMBS = [2, 1, 4, 5];
+/* Which formats get a thumbnail under the hero media — all of them, in
+   the order they appear in FORMATS. */
+const THUMBS = [0, 1, 2, 3, 4, 5];
 
 /* Index of the format selected on first paint. */
 const DEFAULT_FORMAT = 2;

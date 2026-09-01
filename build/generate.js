@@ -161,7 +161,7 @@ ${formatMenu}
     <div style="position: absolute; inset: 0; border-radius: 24px; overflow: hidden; background: #060606;">
       <jggl-media data-hero-media url="${fmt.media}" alt="${esc(fmt.label)}" fit="cover"></jggl-media>
     </div>
-    <div style="position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 16px; width: min(92%, 340px); border: 1px solid #262421; border-radius: 15px; background: rgba(15,15,15,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;">
+    <div class="hero-thumbs" style="position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 16px; border: 1px solid #262421; border-radius: 15px; background: rgba(15,15,15,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 8px;">
 ${thumbs}
     </div>
   </div>
