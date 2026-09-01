@@ -115,6 +115,13 @@ img { display: block; max-width: 100%; }
 .m-only { display: none; }
 .hero-grid { display: grid; grid-template-columns: 1fr 1.04fr; gap: clamp(28px, 4vw, 64px); align-items: stretch; }
 
+/* Плитка выбора формата под hero: шесть миниатюр в ряд, на узких
+   экранах — в два ряда по три, иначе они становятся нечитаемыми. */
+.hero-thumbs { width: min(94%, 470px); display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+@media (max-width: 620px) {
+  .hero-thumbs { width: min(94%, 340px); grid-template-columns: repeat(3, 1fr); gap: 7px; }
+}
+
 /* Pipeline bento grid. */
 .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
 .b7 { grid-column: span 7; grid-row: span 2; }

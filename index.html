@@ -143,18 +143,30 @@
     <div style="position: absolute; inset: 0; border-radius: 24px; overflow: hidden; background: #060606;">
       <jggl-media data-hero-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Image" fit="cover"></jggl-media>
     </div>
-    <div style="position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 16px; width: min(92%, 340px); border: 1px solid #262421; border-radius: 15px; background: rgba(15,15,15,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;">
-<button class="thumb" data-fmt="2" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
-  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid var(--accent); transition: border-color .3s ease;">
-    <jggl-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Image" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+    <div class="hero-thumbs" style="position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 16px; border: 1px solid #262421; border-radius: 15px; background: rgba(15,15,15,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 8px;">
+<button class="thumb" data-fmt="0" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/one-assistant.webp" alt="Text" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
   </span>
-  <span class="thumb-label" style="font-size: 11px; color: #F2F2F0; text-align: center; transition: color .3s ease;">Image</span>
+  <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Text</span>
 </button>
 <button class="thumb" data-fmt="1" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
   <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
     <jggl-media url="https://jggl.ai/images/app/studio-sound.webp" alt="Music" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
   </span>
   <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Music</span>
+</button>
+<button class="thumb" data-fmt="2" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid var(--accent); transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Image" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+  </span>
+  <span class="thumb-label" style="font-size: 11px; color: #F2F2F0; text-align: center; transition: color .3s ease;">Image</span>
+</button>
+<button class="thumb" data-fmt="3" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/feed-mockup-mobile.webp" alt="Video" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+  </span>
+  <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Video</span>
 </button>
 <button class="thumb" data-fmt="4" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
   <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
@@ -164,7 +176,7 @@
 </button>
 <button class="thumb" data-fmt="5" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
   <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
-    <jggl-media url="https://jggl.ai/images/app/chats-reference-bg.webp" alt="Ads" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+    <jggl-media url="https://jggl.ai/images/app/web3-globe.webp" alt="Ads" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
   </span>
   <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Ads</span>
 </button>
