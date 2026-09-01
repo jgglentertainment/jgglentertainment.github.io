@@ -176,7 +176,18 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 899px) {
   .d-only { display: none; }
-  .m-only { display: block; }
+  .m-only { display: block; position: relative; }
+  /* Панель бургера выведена из потока. Внутри потока она увеличивала
+     высоту липкого хедера на ~430px, страница под ним уезжала вниз, и
+     браузер компенсировал это прокруткой — visually это читалось как
+     самопроизвольный сдвиг страницы. Абсолютное позиционирование
+     оставляет высоту хедера неизменной, панель просто накрывает контент. */
+  [data-burger-panel] {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
 }
 
 /* Category comparison: wide table vs stacked cards. */
