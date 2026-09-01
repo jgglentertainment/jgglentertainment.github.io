@@ -392,7 +392,7 @@ ${D.FAQ.map((f, i) => {
 /* ---------- get started ---------- */
 const getStarted = `<section id="get-started" style="padding: var(--sp) 0 96px; scroll-margin-top: 110px;">
   <div data-reveal>
-    <div style="padding: clamp(12px, 2vw, 24px) clamp(20px, 3vw, 40px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <div style="padding: 0 clamp(20px, 3vw, 40px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; align-items: center; text-align: center;">
       <video class="gs-media" src="https://jggl.ai/videos/hero/jin-icon-3d.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
       <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Get started</span>
       <h2 style="margin: 22px 0 0; font-size: clamp(30px, 5.6vw, 62px); line-height: 1.04; font-weight: 500; letter-spacing: -0.032em; max-width: 20ch; text-wrap: pretty;">Create. Publish. <span style="color: var(--accent);">Reach your audience.</span></h2>
