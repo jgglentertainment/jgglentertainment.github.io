@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JGGL — One assistant. Every format. One workflow.</title>
+<meta name="description" content="A single assistant replaces a dozen services: text, images, music, video, voice and advertising are produced and distributed in one workflow.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="assets/jggl-mark.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JGGL — One assistant. Every format. One workflow.">
+<meta property="og:description" content="A single assistant replaces a dozen services: text, images, music, video, voice and advertising are produced and distributed in one workflow.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="assets/iconsax.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<div style="position: relative; min-height: 100vh; background: #0A0A0A; padding: 0 clamp(14px, 2vw, 24px);">
+
+<header style="position: sticky; top: 12px; z-index: 40; max-width: var(--max); margin: 0 auto; padding-top: 12px;">
+  <div class="d-only">
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px 24px; min-height: 66px; padding: 10px 12px 10px 22px; border: 1px solid #1E1E1E; border-radius: 32px; background: rgba(15,15,15,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+      <nav style="flex: 1 1 auto; min-width: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 4px;">
+<a class="nav-link" data-section="ecosystem" href="#ecosystem" style="display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: transparent; font-size: clamp(15px, 1.25vw, 18px); font-weight: 500; letter-spacing: -0.014em; color: #9A9793; white-space: nowrap;">Ecosystem<span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">01</span></a>
+<a class="nav-link" data-section="pipeline" href="#pipeline" style="display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: transparent; font-size: clamp(15px, 1.25vw, 18px); font-weight: 500; letter-spacing: -0.014em; color: #9A9793; white-space: nowrap;">Pipeline<span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">02</span></a>
+<a class="nav-link" data-section="category" href="#category" style="display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: transparent; font-size: clamp(15px, 1.25vw, 18px); font-weight: 500; letter-spacing: -0.014em; color: #9A9793; white-space: nowrap;">Category<span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">03</span></a>
+<a class="nav-link" data-section="faq" href="#faq" style="display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: transparent; font-size: clamp(15px, 1.25vw, 18px); font-weight: 500; letter-spacing: -0.014em; color: #9A9793; white-space: nowrap;">FAQ<span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">04</span></a>
+<a class="nav-link" data-section="get-started" href="#get-started" style="display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: transparent; font-size: clamp(15px, 1.25vw, 18px); font-weight: 500; letter-spacing: -0.014em; color: #9A9793; white-space: nowrap;">Get started<span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">05</span></a>
+      </nav>
+      <div style="flex: none; margin-left: auto; display: flex; align-items: center; gap: 10px;">
+<a class="store-pill" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 11px; padding: 8px 18px; border: 1px solid #2A2825; border-radius: 999px; white-space: nowrap;">
+  <img src="assets/apple.svg" alt="" width="17" height="17" style="width: 17px; height: 17px;">
+  <span style="display: flex; flex-direction: column;">
+    <span style="font-size: 10px; color: #9A9793; line-height: 1.2;">Download on the</span>
+    <span style="font-size: 14px; font-weight: 500; letter-spacing: -0.016em; line-height: 1.2;">App Store</span>
+  </span>
+</a>
+<a class="store-pill" href="https://play.google.com/store/apps/details?id=ai.jggl.app" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 11px; padding: 8px 18px; border: 1px solid #2A2825; border-radius: 999px; white-space: nowrap;">
+  <img src="assets/google-play.svg" alt="" width="16" height="16" style="width: 16px; height: 16px;">
+  <span style="display: flex; flex-direction: column;">
+    <span style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #9A9793; line-height: 1.2;">Get it on</span>
+    <span style="font-size: 14px; font-weight: 500; letter-spacing: -0.016em; line-height: 1.2;">Google Play</span>
+  </span>
+</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-only">
+    <div style="display: flex; justify-content: center;">
+      <div style="display: inline-flex; align-items: center; gap: 14px; padding: 7px 7px 7px 22px; border: 1px solid #1E1E1E; border-radius: 999px; background: rgba(15,15,15,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+        <span data-current-section style="font-size: 16px; color: #9A9793; white-space: nowrap;">Ecosystem</span>
+        <button data-burger aria-label="Menu" aria-expanded="false" style="flex: none; width: 44px; height: 44px; border-radius: 999px; border: 1px solid #26241F; background: #121110; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0;">
+          <span data-bar="top" style="display: block; width: 17px; height: 1.6px; background: #F2F2F0; border-radius: 2px; transition: transform .35s cubic-bezier(.2,.7,.2,1);"></span>
+          <span data-bar="mid" style="display: block; width: 17px; height: 1.6px; background: #F2F2F0; border-radius: 2px; transition: opacity .25s ease;"></span>
+          <span data-bar="bot" style="display: block; width: 17px; height: 1.6px; background: #F2F2F0; border-radius: 2px; transition: transform .35s cubic-bezier(.2,.7,.2,1);"></span>
+        </button>
+      </div>
+    </div>
+    <div data-burger-panel style="overflow: hidden; max-height: 0px; opacity: 0; transition: max-height .5s cubic-bezier(.2,.7,.2,1), opacity .35s ease;">
+      <div style="margin-top: 10px;">
+        <div style="border: 1px solid #1E1E1E; border-radius: 28px; background: rgba(15,15,15,0.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); padding: 10px;">
+<a class="nav-link nav-link-m" data-section="ecosystem" href="#ecosystem" style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border-radius: 18px; background: transparent; font-size: 19px; font-weight: 500; letter-spacing: -0.016em; color: #9A9793;"><span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">01</span>Ecosystem</a>
+<a class="nav-link nav-link-m" data-section="pipeline" href="#pipeline" style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border-radius: 18px; background: transparent; font-size: 19px; font-weight: 500; letter-spacing: -0.016em; color: #9A9793;"><span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">02</span>Pipeline</a>
+<a class="nav-link nav-link-m" data-section="category" href="#category" style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border-radius: 18px; background: transparent; font-size: 19px; font-weight: 500; letter-spacing: -0.016em; color: #9A9793;"><span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">03</span>Category</a>
+<a class="nav-link nav-link-m" data-section="faq" href="#faq" style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border-radius: 18px; background: transparent; font-size: 19px; font-weight: 500; letter-spacing: -0.016em; color: #9A9793;"><span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">04</span>FAQ</a>
+<a class="nav-link nav-link-m" data-section="get-started" href="#get-started" style="display: flex; align-items: center; gap: 14px; padding: 15px 16px; border-radius: 18px; background: transparent; font-size: 19px; font-weight: 500; letter-spacing: -0.016em; color: #9A9793;"><span class="nav-num" style="font-size: 12px; color: #4E4B48; font-variant-numeric: tabular-nums;">05</span>Get started</a>
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 8px 6px; margin-top: 6px; border-top: 1px solid #1A1A1A;">
+<a class="store-pill" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 11px; padding: 8px 18px; border: 1px solid #2A2825; border-radius: 999px; white-space: nowrap;">
+  <img src="assets/apple.svg" alt="" width="17" height="17" style="width: 17px; height: 17px;">
+  <span style="display: flex; flex-direction: column;">
+    <span style="font-size: 10px; color: #9A9793; line-height: 1.2;">Download on the</span>
+    <span style="font-size: 14px; font-weight: 500; letter-spacing: -0.016em; line-height: 1.2;">App Store</span>
+  </span>
+</a>
+<a class="store-pill" href="https://play.google.com/store/apps/details?id=ai.jggl.app" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 11px; padding: 8px 18px; border: 1px solid #2A2825; border-radius: 999px; white-space: nowrap;">
+  <img src="assets/google-play.svg" alt="" width="16" height="16" style="width: 16px; height: 16px;">
+  <span style="display: flex; flex-direction: column;">
+    <span style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #9A9793; line-height: 1.2;">Get it on</span>
+    <span style="font-size: 14px; font-weight: 500; letter-spacing: -0.016em; line-height: 1.2;">Google Play</span>
+  </span>
+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main style="max-width: var(--max); margin: 0 auto;">
+<section class="hero-grid" style="padding: clamp(56px, 8vw, 108px) 0 0;">
+  <div data-reveal>
+    <h1 style="margin: 0; font-size: clamp(36px, 6.4vw, 76px); line-height: 0.98; font-weight: 500; letter-spacing: -0.036em; max-width: 17ch; text-wrap: pretty;">One assistant. Every format. <span style="color: var(--accent);">One workflow.</span></h1>
+    <p style="margin: 24px 0 0; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.58; color: #9A9793; max-width: 46ch; text-wrap: pretty;">A single assistant replaces a dozen services: text, images, music, video, voice and advertising are produced and distributed in one workflow.</p>
+    <div style="position: relative; margin: clamp(28px, 4vw, 44px) 0 0;">
+      <div class="shine" style="position: relative; border-radius: 24px; padding: clamp(18px, 2.4vw, 26px); display: flex; flex-direction: column; gap: clamp(24px, 3vw, 40px); min-height: 190px;">
+        <div style="position: relative;">
+          <div data-ghost style="position: absolute; inset: 0; pointer-events: none; display: flex; align-items: flex-start; font-size: 20px; line-height: 1.4; letter-spacing: -0.018em; color: #8B8884;">
+            <span data-typed></span>
+          </div>
+          <textarea data-composer rows="3" placeholder="" aria-label="Describe what you want to create" style="display: block; width: 100%; min-height: 84px; resize: none; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 20px; line-height: 1.4; letter-spacing: -0.018em; color: #F2F2F0; padding: 0; caret-color: var(--accent);"></textarea>
+        </div>
+        <div style="margin-top: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div style="position: relative;">
+            <button data-fmt-toggle aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center; gap: 10px; font-family: inherit; font-size: 15px; padding: 11px 18px; border-radius: 999px; cursor: pointer; background: #171614; color: #F2F2F0; border: 1px solid #2A2825;">
+              <span data-active-icon style="color: var(--accent); display: flex;"><isax-icon name="gallery" size="16"></isax-icon></span>
+              <span data-active-label>Image</span>
+              <span data-chev style="color: #77746F; font-size: 12px; transform: rotate(0deg); transition: transform .3s ease; display: inline-block;">▾</span>
+            </button>
+            <div data-fmt-menu role="menu" style="position: absolute; bottom: calc(100% + 10px); left: 0; z-index: 20; min-width: 210px; padding: 8px; border: 1px solid #262421; border-radius: 18px; background: #121110; box-shadow: 0 18px 48px rgba(0,0,0,0.6); display: none; flex-direction: column; gap: 2px;">
+<button class="fmt-option" data-fmt="0" style="display: flex; align-items: center; gap: 12px; width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; cursor: pointer; background: transparent; color: #9A9793; border: 0; text-align: left;">
+  <span class="fmt-ic" style="color: #56534F; display: flex;"><isax-icon name="message-text" size="16"></isax-icon></span>Text
+</button>
+<button class="fmt-option" data-fmt="1" style="display: flex; align-items: center; gap: 12px; width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; cursor: pointer; background: transparent; color: #9A9793; border: 0; text-align: left;">
+  <span class="fmt-ic" style="color: #56534F; display: flex;"><isax-icon name="musicnote" size="16"></isax-icon></span>Music
+</button>
+<button class="fmt-option" data-fmt="2" style="display: flex; align-items: center; gap: 12px; width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; cursor: pointer; background: #1D1B19; color: #F2F2F0; border: 0; text-align: left;">
+  <span class="fmt-ic" style="color: var(--accent); display: flex;"><isax-icon name="gallery" size="16"></isax-icon></span>Image
+</button>
+<button class="fmt-option" data-fmt="3" style="display: flex; align-items: center; gap: 12px; width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; cursor: pointer; background: transparent; color: #9A9793; border: 0; text-align: left;">
+  <span class="fmt-ic" style="color: #56534F; display: flex;"><isax-icon name="video" size="16"></isax-icon></span>Video
+</button>
+<button class="fmt-option" data-fmt="4" style="display: flex; align-items: center; gap: 12px; width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; cursor: pointer; background: transparent; color: #9A9793; border: 0; text-align: left;">
+  <span class="fmt-ic" style="color: #56534F; display: flex;"><isax-icon name="microphone-2" size="16"></isax-icon></span>Voice
+</button>
+<button class="fmt-option" data-fmt="5" style="display: flex; align-items: center; gap: 12px; width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; cursor: pointer; background: transparent; color: #9A9793; border: 0; text-align: left;">
+  <span class="fmt-ic" style="color: #56534F; display: flex;"><isax-icon name="trend-up" size="16"></isax-icon></span>Ads
+</button>
+            </div>
+          </div>
+          <span style="font-size: 16px; color: #8B8884;">One engine — every format</span>
+          <button class="send-btn" data-open-modal aria-label="Send to the assistant" style="margin-left: auto; width: 62px; height: 62px; padding: 0; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex: none; transition: transform .3s cubic-bezier(.2,.7,.2,1);">
+            <img src="https://jggl.ai/seo/jggl-send.webp" alt="" width="62" height="62" style="width: 62px; height: 62px; object-fit: contain;">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal data-delay="1" style="position: relative; height: 100%; min-height: clamp(300px, 52vw, 480px);">
+    <div style="position: absolute; inset: 0; border-radius: 24px; overflow: hidden; background: #060606;">
+      <jggl-media data-hero-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Image" fit="cover"></jggl-media>
+    </div>
+    <div style="position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); bottom: 16px; width: min(92%, 340px); border: 1px solid #262421; border-radius: 15px; background: rgba(15,15,15,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;">
+<button class="thumb" data-fmt="2" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid var(--accent); transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Image" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+  </span>
+  <span class="thumb-label" style="font-size: 11px; color: #F2F2F0; text-align: center; transition: color .3s ease;">Image</span>
+</button>
+<button class="thumb" data-fmt="1" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/studio-sound.webp" alt="Music" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+  </span>
+  <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Music</span>
+</button>
+<button class="thumb" data-fmt="4" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/voice-cloning.webp" alt="Voice" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+  </span>
+  <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Voice</span>
+</button>
+<button class="thumb" data-fmt="5" style="display: flex; flex-direction: column; gap: 5px; padding: 0; background: none; border: 0; cursor: pointer; font-family: inherit;">
+  <span class="thumb-ring" style="position: relative; display: block; border-radius: 9px; overflow: hidden; aspect-ratio: 1 / 1; width: 100%; min-height: 0; background: #060606; border: 1.5px solid transparent; transition: border-color .3s ease;">
+    <jggl-media url="https://jggl.ai/images/app/chats-reference-bg.webp" alt="Ads" fit="cover" style="position: absolute; inset: 0;"></jggl-media>
+  </span>
+  <span class="thumb-label" style="font-size: 11px; color: #8B8884; text-align: center; transition: color .3s ease;">Ads</span>
+</button>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 60px 0 0; display: flex; flex-direction: column; align-items: center; text-align: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+<a class="store-pill" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 16px; padding: clamp(11px, 1.4vw, 14px) clamp(20px, 2.4vw, 30px); border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap; text-align: left;">
+  <img src="assets/apple.svg" alt="" width="26" height="26" style="width: 26px; height: 26px;">
+  <span style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 14px; color: #9A9793;">Download on the</span>
+    <span style="font-size: clamp(17px, 2.2vw, 21px); font-weight: 500; letter-spacing: -0.016em; color: #F2F2F0;">App Store</span>
+  </span>
+</a>
+<a class="store-pill" href="https://play.google.com/store/apps/details?id=ai.jggl.app" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 16px; padding: clamp(11px, 1.4vw, 14px) clamp(20px, 2.4vw, 30px); border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap; text-align: left;">
+  <img src="assets/google-play.svg" alt="" width="24" height="24" style="width: 24px; height: 24px;">
+  <span style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #9A9793;">Get it on</span>
+    <span style="font-size: clamp(17px, 2.2vw, 21px); font-weight: 500; letter-spacing: -0.016em; color: #F2F2F0;">Google Play</span>
+  </span>
+</a>
+</div>
+  <p style="margin: 26px 0 0; font-size: 16px; color: #56534F;">Free for the first 100,000 accounts. No subscriptions.</p>
+</section>
+
+<section style="padding: 56px 0 0;" aria-hidden="true">
+  <div class="fade" style="border-top: 1px solid #1E1E1E; border-bottom: 1px solid #1E1E1E; overflow: hidden; padding: 22px 0;">
+    <div class="marquee-track">
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">2.5×</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">faster on generations</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">13s</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">text to image</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">90%</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">original content</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">43%</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">faster music assembly</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">1</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">assistant, every format</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">2.5×</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">faster on generations</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">13s</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">text to image</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">90%</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">original content</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">43%</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">faster music assembly</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+<span style="display: flex; align-items: baseline; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); white-space: nowrap;">
+  <span style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-size: clamp(22px, 3.4vw, 30px); font-weight: 500; letter-spacing: -0.03em; color: var(--accent);">1</span>
+    <span style="font-size: clamp(14px, 2vw, 17px); color: #8B8884;">assistant, every format</span>
+  </span>
+  <span style="width: 1px; height: 26px; background: #232323; display: block; align-self: center;"></span>
+</span>
+    </div>
+  </div>
+</section>
+
+<section id="ecosystem" style="padding: var(--sp) 0 0; scroll-margin-top: 110px;">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 48px;">
+  <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Ecosystem</span>
+  <h2 data-reveal style="margin: 20px 0 0; font-size: clamp(28px, 5.2vw, 56px); line-height: 1.08; font-weight: 500; letter-spacing: -0.028em; max-width: 26ch; text-wrap: pretty;">Two products.&nbsp; One integrated ecosystem.</h2>
+
+</div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+<a class="product-card" data-reveal data-delay="0" href="#/app" style="display: flex; flex-direction: column; border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: 16px; cursor: pointer; transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1), border-color .35s ease;">
+  <div style="border-radius: 20px; background: #060606; aspect-ratio: 1 / 1; width: 100%; overflow: hidden;">
+    <jggl-media url="https://jggl.ai/images/app/feed-mockup-mobile.webp" alt="JGGL App 360 Feed" fit="cover"></jggl-media>
+  </div>
+  <div style="padding: 26px 12px 12px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="color: var(--accent); display: flex;"><isax-icon name="monitor" size="19"></isax-icon></span>
+      <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.022em;">JGGL App</h3>
+    </div>
+    <p style="margin: 16px 0 22px; font-size: 16.5px; line-height: 1.7; color: #8B8884; text-wrap: pretty;">A social network combining a 360 Feed, a messenger and AI tools. Music, video, voice and advertising are produced through a single AI-powered chat.</p>
+    <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #1A1A1A; font-size: 14px;">
+      <span style="color: #56534F;">Status</span>
+      <span style="color: #C7C4C0; text-align: right;">Available now</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #1A1A1A; font-size: 14px;">
+      <span style="color: #56534F;">Platforms</span>
+      <span style="color: #C7C4C0; text-align: right;">iOS · Android</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #1A1A1A; font-size: 14px;">
+      <span style="color: #56534F;">Release</span>
+      <span style="color: #C7C4C0; text-align: right;">v1.0.9</span>
+    </div>
+  </div>
+</a>
+<a class="product-card" data-reveal data-delay="1" href="#/buddy" style="display: flex; flex-direction: column; border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: 16px; cursor: pointer; transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1), border-color .35s ease;">
+  <div style="border-radius: 20px; background: #060606; aspect-ratio: 1 / 1; width: 100%; overflow: hidden;">
+    <jggl-media url="https://jggl.ai/videos/products/buddy.webm" alt="JGGL Buddy device" fit="cover"></jggl-media>
+  </div>
+  <div style="padding: 26px 12px 12px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="color: var(--accent); display: flex;"><isax-icon name="speaker" size="19"></isax-icon></span>
+      <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.022em;">JGGL Buddy</h3>
+    </div>
+    <p style="margin: 16px 0 22px; font-size: 16.5px; line-height: 1.7; color: #8B8884; text-wrap: pretty;">A device built for direct interaction: a 360° holographic dome, an AI avatar and a marketplace of personalities.</p>
+    <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #1A1A1A; font-size: 14px;">
+      <span style="color: #56534F;">Status</span>
+      <span style="color: #C7C4C0; text-align: right;">In development</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #1A1A1A; font-size: 14px;">
+      <span style="color: #56534F;">Form factor</span>
+      <span style="color: #C7C4C0; text-align: right;">Speaker · 360° dome</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #1A1A1A; font-size: 14px;">
+      <span style="color: #56534F;">Market</span>
+      <span style="color: #C7C4C0; text-align: right;">$15.6B → $65B by 2034</span>
+    </div>
+  </div>
+</a>
+  </div>
+</section>
+
+<section id="pipeline" style="padding: var(--sp) 0 0; scroll-margin-top: 110px;">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 48px;">
+  <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Pipeline</span>
+  <h2 data-reveal style="margin: 20px 0 0; font-size: clamp(28px, 5.2vw, 56px); line-height: 1.08; font-weight: 500; letter-spacing: -0.028em; max-width: 28ch; text-wrap: pretty;">Proprietary infrastructure.&nbsp; Compounding margin.</h2>
+  <p style="margin: 20px 0 0; font-size: clamp(16px, 2.1vw, 19px); line-height: 1.62; color: #9A9793; max-width: 62ch; text-wrap: pretty;">The advantage is infrastructural rather than conversational: cost per generation is 2–3× lower than the GPT API under production load.</p>
+</div>
+  <div class="bento">
+    <div data-reveal class="b7" style="display: flex; flex-direction: column; border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: 16px;">
+      <div style="padding: 20px 16px 26px;">
+<span style="display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="magicpen" size="18"></isax-icon>Guided production</span>
+        <h3 style="margin: 20px 0 14px; font-size: clamp(24px, 2.2vw, 33px); font-weight: 500; letter-spacing: -0.024em; line-height: 1.2; max-width: 26ch; text-wrap: pretty;">From idea to publication, without a perfect prompt</h3>
+        <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #8B8884; max-width: 52ch; text-wrap: pretty;">The assistant proposes what to create and which audience to address, which extends authorship across the entire user base.</p>
+      </div>
+      <div style="margin-top: auto; border-radius: 20px; background: #060606; height: clamp(220px, 34vw, 400px); width: 100%; overflow: hidden;">
+        <jggl-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Authorship across the user base" fit="cover"></jggl-media>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="1" class="b5" style="display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: 300px; border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: clamp(24px, 3vw, 36px);">
+<span style="display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="flash" size="18"></isax-icon>Faster on generations</span>
+      <div style="font-size: clamp(52px, 5.6vw, 88px); line-height: 0.9; letter-spacing: -0.042em; color: var(--accent); font-weight: 500;">2.5×</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #8B8884; text-wrap: pretty;">Measured against GPT-5.2 on the same generation tasks. Response speed approximately doubled after the architecture rework.</p>
+    </div>
+
+    <div data-reveal data-delay="2" class="b5" style="border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: 300px;">
+<span style="display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="chart-2" size="18"></isax-icon>Output quality</span>
+      <div style="display: flex; gap: 24px;">
+        <div style="flex: 1;">
+          <div style="font-size: clamp(40px, 4.2vw, 66px); line-height: 0.9; letter-spacing: -0.042em; color: var(--accent); font-weight: 500;">13s</div>
+          <div style="margin-top: 14px; font-size: 14px; letter-spacing: -0.01em; color: #56534F;">Text to image</div>
+        </div>
+        <div style="width: 1px; background: #1E1E1E;"></div>
+        <div style="flex: 1;">
+          <div style="font-size: clamp(40px, 4.2vw, 66px); line-height: 0.9; letter-spacing: -0.042em; color: #F2F2F0; font-weight: 500;">90%</div>
+          <div style="margin-top: 14px; font-size: 14px; letter-spacing: -0.01em; color: #56534F;">Created in-app</div>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #8B8884; text-wrap: pretty;">13 seconds against 28 on average, at 60% against 70% blind preference. More than 90% of published content is original work.</p>
+    </div>
+
+    <div data-reveal data-delay="3" class="b4" style="display: flex; flex-direction: column; border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: clamp(24px, 3vw, 32px);">
+<span style="display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="layer" size="18"></isax-icon>One assistant</span>
+      <h3 style="margin: 28px 0 14px; font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.26; text-wrap: pretty;">Every role, one dialogue</h3>
+      <p style="margin: 0; font-size: 16.5px; line-height: 1.72; color: #8B8884; text-wrap: pretty;">Covers the functions previously split between Midjourney, Suno, ChatGPT, a video editor and an advertising dashboard.</p>
+      <div style="margin-top: auto; padding-top: 32px; display: flex; flex-wrap: wrap; gap: 8px;">
+<span style="padding: 6px 14px; border: 1px solid #262626; border-radius: 999px; font-size: 13px; color: #9A9793;">Midjourney</span>
+<span style="padding: 6px 14px; border: 1px solid #262626; border-radius: 999px; font-size: 13px; color: #9A9793;">Suno</span>
+<span style="padding: 6px 14px; border: 1px solid #262626; border-radius: 999px; font-size: 13px; color: #9A9793;">ChatGPT</span>
+<span style="padding: 6px 14px; border: 1px solid #262626; border-radius: 999px; font-size: 13px; color: #9A9793;">Video editor</span>
+<span style="padding: 6px 14px; border: 1px solid #262626; border-radius: 999px; font-size: 13px; color: #9A9793;">Ads dashboard</span>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="4" class="b8 split" style="border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: 16px;">
+      <div style="align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: 26px 20px;">
+<span style="display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="musicnote" size="18"></isax-icon>Music studio</span>
+        <div>
+          <div style="font-size: clamp(44px, 4.6vw, 70px); line-height: 0.9; letter-spacing: -0.042em; color: #F2F2F0; font-weight: 500;">43%</div>
+          <div style="margin-top: 14px; font-size: 14px; letter-spacing: -0.01em; color: #56534F;">Faster than Suno</div>
+        </div>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.72; color: #8B8884; text-wrap: pretty;">A finished track is assembled 42.9% faster than in Suno. In direct comparisons with AceStep, tracks are preferred in up to 90% of cases. Users can clone their own voice or generate an instrumental.</p>
+      </div>
+      <div style="border-radius: 20px; background: #060606; height: 100%; min-height: clamp(220px, 30vw, 340px); width: 100%; overflow: hidden;">
+        <jggl-media url="https://jggl.ai/images/app/studio-sound.webp" alt="Music studio in the JGGL App" fit="cover"></jggl-media>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="category" style="padding: var(--sp) 0 0; scroll-margin-top: 110px;">
+  <div style="border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: clamp(10px, 1.2vw, 16px);">
+    <div style="padding: clamp(24px, 3vw, 32px) clamp(14px, 2vw, 24px) clamp(26px, 3.4vw, 36px); text-align: center;">
+      <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Category</span>
+      <h2 data-reveal style="margin: 20px auto 0; font-size: clamp(27px, 5vw, 52px); line-height: 1.1; font-weight: 500; letter-spacing: -0.028em; max-width: 24ch; text-wrap: pretty;">No direct equivalent.&nbsp; Both layers in one product.</h2>
+      <p style="margin: 20px auto 0; font-size: clamp(16px, 2vw, 18px); line-height: 1.65; color: #9A9793; max-width: 64ch; text-wrap: pretty;">Instagram and TikTok provide distribution without generation. Midjourney and Suno provide generation without distribution. JGGL operates the full create–publish–promote cycle.</p>
+    </div>
+    <div class="t-wide" style="border-radius: 20px; background: #0A0A0A; overflow: hidden;">
+<div style="display: grid; grid-template-columns: minmax(0, 1.7fr) repeat(6, minmax(0, 1fr)); align-items: center; border-bottom: 1px solid #1A1A1A;">
+  <div style="padding: clamp(14px, 2vw, 20px) clamp(14px, 2.4vw, 26px); font-size: 14px; letter-spacing: -0.01em; color: #56534F;">Capability</div>
+  <div style="padding: clamp(14px, 2vw, 20px) 6px; display: flex; justify-content: center;">
+    <img src="assets/jggl-mark.png" alt="JGGL" width="34" height="34" style="width: 34px; height: 34px; object-fit: contain; transform: scale(1.35);">
+  </div>
+  <div style="padding: clamp(14px, 2vw, 20px) 6px; display: flex; justify-content: center;">
+    <jggl-media url="https://jggl.ai/images/brands/instagram.svg" alt="Instagram" fit="contain" style="height: 18px; width: 26px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+  </div>
+  <div style="padding: clamp(14px, 2vw, 20px) 6px; display: flex; justify-content: center;">
+    <jggl-media url="https://jggl.ai/images/brands/tiktok.svg" alt="TikTok" fit="contain" style="height: 18px; width: 26px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+  </div>
+  <div style="padding: clamp(14px, 2vw, 20px) 6px; display: flex; justify-content: center;">
+    <jggl-media url="https://jggl.ai/images/brands/midjourney.svg" alt="Midjourney" fit="contain" style="height: 18px; width: 26px; opacity: 0.65; filter: invert(1) brightness(2.6) grayscale(1);"></jggl-media>
+  </div>
+  <div style="padding: clamp(14px, 2vw, 20px) 6px; display: flex; justify-content: center;">
+    <jggl-media url="https://jggl.ai/images/brands/suno.svg" alt="Suno" fit="contain" style="height: 18px; width: 26px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+  </div>
+  <div style="padding: clamp(14px, 2vw, 20px) 6px; display: flex; justify-content: center;">
+    <jggl-media url="https://jggl.ai/images/brands/openai.svg" alt="OpenAI" fit="contain" style="height: 18px; width: 26px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+  </div>
+</div>
+<div class="trow" style="display: grid; grid-template-columns: minmax(0, 1.7fr) repeat(6, minmax(0, 1fr)); align-items: center; border-bottom: 1px solid #141414;">
+  <div style="padding: clamp(18px, 2.4vw, 24px) clamp(14px, 2.4vw, 26px);">
+    <div style="font-size: clamp(15px, 1.9vw, 18px); letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">AI generation across formats</div>
+    <div style="margin-top: 6px; font-size: clamp(13px, 1.6vw, 15px); color: #6E6B67; text-wrap: pretty;">Text, image, music, video and voice</div>
+  </div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: var(--accent);">All formats</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">Single format</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">Single format</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">Text only</div>
+</div>
+<div class="trow" style="display: grid; grid-template-columns: minmax(0, 1.7fr) repeat(6, minmax(0, 1fr)); align-items: center; border-bottom: 1px solid #141414;">
+  <div style="padding: clamp(18px, 2.4vw, 24px) clamp(14px, 2.4vw, 26px);">
+    <div style="font-size: clamp(15px, 1.9vw, 18px); letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">Distribution surface</div>
+    <div style="margin-top: 6px; font-size: clamp(13px, 1.6vw, 15px); color: #6E6B67; text-wrap: pretty;">A feed for published work</div>
+  </div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: var(--accent);">360 Feed</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">Static</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">Static</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+</div>
+<div class="trow" style="display: grid; grid-template-columns: minmax(0, 1.7fr) repeat(6, minmax(0, 1fr)); align-items: center; border-bottom: 1px solid #141414;">
+  <div style="padding: clamp(18px, 2.4vw, 24px) clamp(14px, 2.4vw, 26px);">
+    <div style="font-size: clamp(15px, 1.9vw, 18px); letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">End-to-end production cycle</div>
+    <div style="margin-top: 6px; font-size: clamp(13px, 1.6vw, 15px); color: #6E6B67; text-wrap: pretty;">Create, publish and promote in one flow</div>
+  </div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: var(--accent);">Single flow</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+  <div style="padding: clamp(18px, 2.4vw, 24px) 6px; text-align: center; font-size: clamp(13px, 1.7vw, 16px); text-wrap: pretty; color: #6E6B67;">—</div>
+</div>
+    </div>
+    <div class="t-narrow">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+  <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">AI generation across formats</div>
+  <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">Text, image, music, video and voice</div>
+  <div style="margin-top: 18px; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <img src="assets/jggl-mark.png" alt="JGGL" width="30" height="30" style="width: 30px; height: 30px; object-fit: contain; transform: scale(1.35);">
+      </span>
+      <span style="font-size: 15px; color: var(--accent); text-align: right;">All formats</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/instagram.svg" alt="Instagram" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/tiktok.svg" alt="TikTok" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/midjourney.svg" alt="Midjourney" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: invert(1) brightness(2.6) grayscale(1);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">Single format</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/suno.svg" alt="Suno" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">Single format</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/openai.svg" alt="OpenAI" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">Text only</span>
+    </div>
+  </div>
+</div>
+<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+  <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">Distribution surface</div>
+  <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">A feed for published work</div>
+  <div style="margin-top: 18px; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <img src="assets/jggl-mark.png" alt="JGGL" width="30" height="30" style="width: 30px; height: 30px; object-fit: contain; transform: scale(1.35);">
+      </span>
+      <span style="font-size: 15px; color: var(--accent); text-align: right;">360 Feed</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/instagram.svg" alt="Instagram" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">Static</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/tiktok.svg" alt="TikTok" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">Static</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/midjourney.svg" alt="Midjourney" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: invert(1) brightness(2.6) grayscale(1);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/suno.svg" alt="Suno" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/openai.svg" alt="OpenAI" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+  </div>
+</div>
+<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+  <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">End-to-end production cycle</div>
+  <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">Create, publish and promote in one flow</div>
+  <div style="margin-top: 18px; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <img src="assets/jggl-mark.png" alt="JGGL" width="30" height="30" style="width: 30px; height: 30px; object-fit: contain; transform: scale(1.35);">
+      </span>
+      <span style="font-size: 15px; color: var(--accent); text-align: right;">Single flow</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/instagram.svg" alt="Instagram" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/tiktok.svg" alt="TikTok" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/midjourney.svg" alt="Midjourney" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: invert(1) brightness(2.6) grayscale(1);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/suno.svg" alt="Suno" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #161616;">
+      <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <jggl-media url="https://jggl.ai/images/brands/openai.svg" alt="OpenAI" fit="contain" style="height: 16px; width: 24px; opacity: 0.65; filter: grayscale(1) brightness(2.4);"></jggl-media>
+      </span>
+      <span style="font-size: 15px; color: #6E6B67; text-align: right;">—</span>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding: var(--sp) 0 0; scroll-margin-top: 110px;">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 48px;">
+  <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Questions</span>
+  <h2 data-reveal style="margin: 20px 0 0; font-size: clamp(28px, 5.2vw, 56px); line-height: 1.08; font-weight: 500; letter-spacing: -0.028em; max-width: 26ch; text-wrap: pretty;">Product, technology&nbsp; and economics.</h2>
+
+</div>
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+<div class="faq-row is-open" style="border: 1px solid rgba(255,108,25,0.34); border-radius: 24px; background: rgba(255,108,25,0.07); box-shadow: inset 3px 0 0 0 var(--accent); overflow: hidden; transition: border-color .35s ease, background .35s ease, box-shadow .35s ease;">
+  <button class="faq-toggle" data-faq="0" aria-expanded="true" aria-controls="faq-panel-0" style="width: 100%; display: flex; align-items: flex-start; gap: clamp(12px, 1.6vw, 22px); padding: clamp(20px, 2.6vw, 28px); background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; color: #F2F2F0;">
+    <span class="faq-num" style="font-size: 14px; letter-spacing: -0.01em; color: var(--accent); padding-top: 8px; flex: none; transition: color .3s ease;">01</span>
+    <span class="faq-q" style="flex: 1; font-size: clamp(18px, 2.9vw, 26px); line-height: 1.34; letter-spacing: -0.022em; color: #F2F2F0; transition: color .3s ease; text-wrap: pretty;">What is JGGL?</span>
+    <span class="faq-plus" aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(255,108,25,0.45); display: flex; align-items: center; justify-content: center; font-size: 19px; line-height: 1; color: var(--accent); transform: rotate(45deg); transition: transform .45s cubic-bezier(.2,.7,.2,1), color .3s ease, border-color .3s ease;">+</span>
+  </button>
+  <div class="faq-panel" id="faq-panel-0" style="overflow: hidden; max-height: 640px; opacity: 1; transition: max-height .6s cubic-bezier(.2,.7,.2,1), opacity .45s ease;">
+    <p style="margin: 0; padding: 0 clamp(20px, 2.6vw, 28px) clamp(22px, 3vw, 30px) clamp(20px, 4.4vw, 62px); font-size: clamp(16px, 2vw, 18px); line-height: 1.74; color: #8B8884; max-width: 88ch; text-wrap: pretty;">JGGL is an AI-first social network that combines a feed, music, short video and messaging in a single application. One assistant supports the process from idea through publication and promotion, without separate services such as ChatGPT, Midjourney, Suno or an advertising dashboard. The resulting create–publish–promote cycle requires both proprietary generation and a proprietary feed.</p>
+  </div>
+</div>
+<div class="faq-row" style="border: 1px solid #1E1E1E; border-radius: 24px; background: #0F0F0F; box-shadow: none; overflow: hidden; transition: border-color .35s ease, background .35s ease, box-shadow .35s ease;">
+  <button class="faq-toggle" data-faq="1" aria-expanded="false" aria-controls="faq-panel-1" style="width: 100%; display: flex; align-items: flex-start; gap: clamp(12px, 1.6vw, 22px); padding: clamp(20px, 2.6vw, 28px); background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; color: #F2F2F0;">
+    <span class="faq-num" style="font-size: 14px; letter-spacing: -0.01em; color: #56534F; padding-top: 8px; flex: none; transition: color .3s ease;">02</span>
+    <span class="faq-q" style="flex: 1; font-size: clamp(18px, 2.9vw, 26px); line-height: 1.34; letter-spacing: -0.022em; color: #C7C4C0; transition: color .3s ease; text-wrap: pretty;">How does JGGL differ from existing social networks and AI tools?</span>
+    <span class="faq-plus" aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid #262626; display: flex; align-items: center; justify-content: center; font-size: 19px; line-height: 1; color: #9A9793; transform: rotate(0deg); transition: transform .45s cubic-bezier(.2,.7,.2,1), color .3s ease, border-color .3s ease;">+</span>
+  </button>
+  <div class="faq-panel" id="faq-panel-1" style="overflow: hidden; max-height: 0px; opacity: 0; transition: max-height .6s cubic-bezier(.2,.7,.2,1), opacity .45s ease;">
+    <p style="margin: 0; padding: 0 clamp(20px, 2.6vw, 28px) clamp(22px, 3vw, 30px) clamp(20px, 4.4vw, 62px); font-size: clamp(16px, 2vw, 18px); line-height: 1.74; color: #8B8884; max-width: 88ch; text-wrap: pretty;">Instagram and TikTok provide an audience without production tools. Suno and Midjourney provide production tools without an audience. JGGL combines both layers: more than 90% of content is created inside the application. The underlying pipeline is 2.5× faster than GPT-5.2 on generations and 2–3× cheaper than the GPT API under production load, which represents both a product and a margin advantage.</p>
+  </div>
+</div>
+<div class="faq-row" style="border: 1px solid #1E1E1E; border-radius: 24px; background: #0F0F0F; box-shadow: none; overflow: hidden; transition: border-color .35s ease, background .35s ease, box-shadow .35s ease;">
+  <button class="faq-toggle" data-faq="2" aria-expanded="false" aria-controls="faq-panel-2" style="width: 100%; display: flex; align-items: flex-start; gap: clamp(12px, 1.6vw, 22px); padding: clamp(20px, 2.6vw, 28px); background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; color: #F2F2F0;">
+    <span class="faq-num" style="font-size: 14px; letter-spacing: -0.01em; color: #56534F; padding-top: 8px; flex: none; transition: color .3s ease;">03</span>
+    <span class="faq-q" style="flex: 1; font-size: clamp(18px, 2.9vw, 26px); line-height: 1.34; letter-spacing: -0.022em; color: #C7C4C0; transition: color .3s ease; text-wrap: pretty;">How does the AI assistant work, and why does it matter commercially?</span>
+    <span class="faq-plus" aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid #262626; display: flex; align-items: center; justify-content: center; font-size: 19px; line-height: 1; color: #9A9793; transform: rotate(0deg); transition: transform .45s cubic-bezier(.2,.7,.2,1), color .3s ease, border-color .3s ease;">+</span>
+  </button>
+  <div class="faq-panel" id="faq-panel-2" style="overflow: hidden; max-height: 0px; opacity: 0; transition: max-height .6s cubic-bezier(.2,.7,.2,1), opacity .45s ease;">
+    <p style="margin: 0; padding: 0 clamp(20px, 2.6vw, 28px) clamp(22px, 3vw, 30px) clamp(20px, 4.4vw, 62px); font-size: clamp(16px, 2vw, 18px); line-height: 1.74; color: #8B8884; max-width: 88ch; text-wrap: pretty;">The assistant operates as a producer rather than a prompt interface: it proposes what to create, how to refine it and which audience to address. A single dialogue covers text, image, music and video generation, publication and advertising. This extends potential authorship from a professional minority to the entire user base, and with it the monetisable audience.</p>
+  </div>
+</div>
+<div class="faq-row" style="border: 1px solid #1E1E1E; border-radius: 24px; background: #0F0F0F; box-shadow: none; overflow: hidden; transition: border-color .35s ease, background .35s ease, box-shadow .35s ease;">
+  <button class="faq-toggle" data-faq="3" aria-expanded="false" aria-controls="faq-panel-3" style="width: 100%; display: flex; align-items: flex-start; gap: clamp(12px, 1.6vw, 22px); padding: clamp(20px, 2.6vw, 28px); background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; color: #F2F2F0;">
+    <span class="faq-num" style="font-size: 14px; letter-spacing: -0.01em; color: #56534F; padding-top: 8px; flex: none; transition: color .3s ease;">04</span>
+    <span class="faq-q" style="flex: 1; font-size: clamp(18px, 2.9vw, 26px); line-height: 1.34; letter-spacing: -0.022em; color: #C7C4C0; transition: color .3s ease; text-wrap: pretty;">How does JGGL generate revenue?</span>
+    <span class="faq-plus" aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid #262626; display: flex; align-items: center; justify-content: center; font-size: 19px; line-height: 1; color: #9A9793; transform: rotate(0deg); transition: transform .45s cubic-bezier(.2,.7,.2,1), color .3s ease, border-color .3s ease;">+</span>
+  </button>
+  <div class="faq-panel" id="faq-panel-3" style="overflow: hidden; max-height: 0px; opacity: 0; transition: max-height .6s cubic-bezier(.2,.7,.2,1), opacity .45s ease;">
+    <p style="margin: 0; padding: 0 clamp(20px, 2.6vw, 28px) clamp(22px, 3vw, 30px) clamp(20px, 4.4vw, 62px); font-size: clamp(16px, 2vw, 18px); line-height: 1.74; color: #8B8884; max-width: 88ch; text-wrap: pretty;">Through three streams. Generations: paid and bonus credits for AI content, including images, video, music and voice cloning, with post and caption text excluded from limits. JGGL Ads: promotion of posts and profiles inside the platform, launched in chat rather than through a separate dashboard. Ecosystem: JGGL Buddy hardware, an avatar marketplace, subscriptions and accessories.</p>
+  </div>
+</div>
+<div class="faq-row" style="border: 1px solid #1E1E1E; border-radius: 24px; background: #0F0F0F; box-shadow: none; overflow: hidden; transition: border-color .35s ease, background .35s ease, box-shadow .35s ease;">
+  <button class="faq-toggle" data-faq="4" aria-expanded="false" aria-controls="faq-panel-4" style="width: 100%; display: flex; align-items: flex-start; gap: clamp(12px, 1.6vw, 22px); padding: clamp(20px, 2.6vw, 28px); background: none; border: 0; cursor: pointer; text-align: left; font-family: inherit; color: #F2F2F0;">
+    <span class="faq-num" style="font-size: 14px; letter-spacing: -0.01em; color: #56534F; padding-top: 8px; flex: none; transition: color .3s ease;">05</span>
+    <span class="faq-q" style="flex: 1; font-size: clamp(18px, 2.9vw, 26px); line-height: 1.34; letter-spacing: -0.022em; color: #C7C4C0; transition: color .3s ease; text-wrap: pretty;">What is JGGL Buddy and how does it connect to the application?</span>
+    <span class="faq-plus" aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid #262626; display: flex; align-items: center; justify-content: center; font-size: 19px; line-height: 1; color: #9A9793; transform: rotate(0deg); transition: transform .45s cubic-bezier(.2,.7,.2,1), color .3s ease, border-color .3s ease;">+</span>
+  </button>
+  <div class="faq-panel" id="faq-panel-4" style="overflow: hidden; max-height: 0px; opacity: 0; transition: max-height .6s cubic-bezier(.2,.7,.2,1), opacity .45s ease;">
+    <p style="margin: 0; padding: 0 clamp(20px, 2.6vw, 28px) clamp(22px, 3vw, 30px) clamp(20px, 4.4vw, 62px); font-size: clamp(16px, 2vw, 18px); line-height: 1.74; color: #8B8884; max-width: 88ch; text-wrap: pretty;">JGGL Buddy is an AI companion device: a speaker with a 360° holographic display. Content created in the JGGL App appears on the dome, and posts, tracks and scenarios can be produced by voice, without a screen. The two devices operate as a single product. The smart-speaker market is projected to grow from $15.6B to $65B by 2034, with limited competition in this segment.</p>
+  </div>
+</div>
+  </div>
+</section>
+
+<section id="get-started" style="padding: var(--sp) 0 96px; scroll-margin-top: 110px;">
+  <div data-reveal style="border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; padding: 16px;">
+    <div style="border-radius: 24px; background: #0A0A0A; padding: clamp(48px, 7vw, 88px) clamp(20px, 3vw, 40px); display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <video src="https://jggl.ai/videos/hero/jin-icon-3d.mp4" autoplay muted loop playsinline aria-hidden="true" style="width: clamp(92px, 15vw, 148px); height: clamp(92px, 15vw, 148px); object-fit: contain; margin-bottom: clamp(24px, 3.4vw, 36px);"></video>
+      <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Get started</span>
+      <h2 style="margin: 22px 0 0; font-size: clamp(30px, 5.6vw, 62px); line-height: 1.04; font-weight: 500; letter-spacing: -0.032em; max-width: 20ch; text-wrap: pretty;">Create. Publish. <span style="color: var(--accent);">Reach your audience.</span></h2>
+      <p style="margin: 24px 0 0; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.6; color: #9A9793; max-width: 48ch; text-wrap: pretty;">A social network where publishing is available to every user. Free for the first 100,000 accounts.</p>
+<div style="margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+<a class="store-pill" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 16px; padding: clamp(11px, 1.4vw, 14px) clamp(20px, 2.4vw, 30px); border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap; text-align: left;">
+  <img src="assets/apple.svg" alt="" width="26" height="26" style="width: 26px; height: 26px;">
+  <span style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 14px; color: #9A9793;">Download on the</span>
+    <span style="font-size: clamp(17px, 2.2vw, 21px); font-weight: 500; letter-spacing: -0.016em; color: #F2F2F0;">App Store</span>
+  </span>
+</a>
+<a class="store-pill" href="https://play.google.com/store/apps/details?id=ai.jggl.app" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 16px; padding: clamp(11px, 1.4vw, 14px) clamp(20px, 2.4vw, 30px); border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap; text-align: left;">
+  <img src="assets/google-play.svg" alt="" width="24" height="24" style="width: 24px; height: 24px;">
+  <span style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #9A9793;">Get it on</span>
+    <span style="font-size: clamp(17px, 2.2vw, 21px); font-weight: 500; letter-spacing: -0.016em; color: #F2F2F0;">Google Play</span>
+  </span>
+</a>
+</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="max-width: var(--max); margin: 0 auto 48px; border: 1px solid #1E1E1E; border-radius: var(--r); background: #0F0F0F; overflow: hidden;">
+  <a class="ticker-link" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" aria-label="Download the JGGL App" style="display: block; padding: clamp(22px, 3.4vw, 46px) 0; border-bottom: 1px solid #1E1E1E; overflow: hidden; color: #F2F2F0; transition: background .3s ease;">
+    <div class="ticker-track">
+<span style="display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); font-size: clamp(26px, 5.6vw, 76px); line-height: 1; letter-spacing: -0.036em; color: #F2F2F0; white-space: nowrap;">
+  Create.<img src="assets/note.png" alt="" width="72" height="72" style="width: clamp(24px, 4.4vw, 68px); height: auto; flex: none;">
+</span>
+<span style="display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); font-size: clamp(26px, 5.6vw, 76px); line-height: 1; letter-spacing: -0.036em; color: #F2F2F0; white-space: nowrap;">
+  Publish.<img src="assets/note.png" alt="" width="72" height="72" style="width: clamp(24px, 4.4vw, 68px); height: auto; flex: none;">
+</span>
+<span style="display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); font-size: clamp(26px, 5.6vw, 76px); line-height: 1; letter-spacing: -0.036em; color: var(--accent); white-space: nowrap;">
+  Reach your audience.<img src="assets/note.png" alt="" width="72" height="72" style="width: clamp(24px, 4.4vw, 68px); height: auto; flex: none;">
+</span>
+<span style="display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); font-size: clamp(26px, 5.6vw, 76px); line-height: 1; letter-spacing: -0.036em; color: #F2F2F0; white-space: nowrap;">
+  Create.<img src="assets/note.png" alt="" width="72" height="72" style="width: clamp(24px, 4.4vw, 68px); height: auto; flex: none;">
+</span>
+<span style="display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); font-size: clamp(26px, 5.6vw, 76px); line-height: 1; letter-spacing: -0.036em; color: #F2F2F0; white-space: nowrap;">
+  Publish.<img src="assets/note.png" alt="" width="72" height="72" style="width: clamp(24px, 4.4vw, 68px); height: auto; flex: none;">
+</span>
+<span style="display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); padding-right: clamp(20px, 3vw, 40px); font-size: clamp(26px, 5.6vw, 76px); line-height: 1; letter-spacing: -0.036em; color: var(--accent); white-space: nowrap;">
+  Reach your audience.<img src="assets/note.png" alt="" width="72" height="72" style="width: clamp(24px, 4.4vw, 68px); height: auto; flex: none;">
+</span>
+    </div>
+  </a>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); border-top: 1px solid #1E1E1E;">
+<div class="f-pair">
+  <div class="f-tile" style="padding: clamp(28px, 3vw, 40px) clamp(24px, 2.6vw, 36px); border-left: 1px solid #1E1E1E; border-bottom: 1px solid #1E1E1E; margin-left: -1px; display: flex; flex-direction: column; gap: 20px;">
+    <span style="display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="layer" size="18"></isax-icon>Sections</span>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+    <a href="#ecosystem" data-scroll style="font-size: 16px; color: #A5A29E;">Ecosystem</a>
+    <a href="#pipeline" data-scroll style="font-size: 16px; color: #A5A29E;">Pipeline</a>
+    <a href="#category" data-scroll style="font-size: 16px; color: #A5A29E;">Category</a>
+    <a href="#faq" data-scroll style="font-size: 16px; color: #A5A29E;">FAQ</a>
+    <a href="#get-started" data-scroll style="font-size: 16px; color: #A5A29E;">Get started</a>
+  </div>
+  </div>
+  <div class="f-tile" style="padding: clamp(28px, 3vw, 40px) clamp(24px, 2.6vw, 36px); border-left: 1px solid #1E1E1E; border-bottom: 1px solid #1E1E1E; margin-left: -1px; display: flex; flex-direction: column; gap: 20px;">
+    <span style="display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="send-2" size="18"></isax-icon>Download</span>
+<div class="f-stores" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+<a class="store-pill f-store" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 9px 18px; border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap;">
+  <img src="assets/apple.svg" alt="" width="17" height="17" style="width: 17px; height: 17px;">
+  <span style="display: flex; flex-direction: column;">
+    <span class="st-sub" style="font-size: 10px; color: #9A9793; line-height: 1.2;">Download on the</span>
+    <span class="st-name" style="font-size: 14px; font-weight: 500; letter-spacing: -0.016em; line-height: 1.2;">App Store</span>
+  </span>
+</a>
+<a class="store-pill f-store" href="https://play.google.com/store/apps/details?id=ai.jggl.app" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 9px 18px; border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap;">
+  <img src="assets/google-play.svg" alt="" width="16" height="16" style="width: 16px; height: 16px;">
+  <span style="display: flex; flex-direction: column;">
+    <span class="st-sub" style="font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #9A9793; line-height: 1.2;">Get it on</span>
+    <span class="st-name" style="font-size: 14px; font-weight: 500; letter-spacing: -0.016em; line-height: 1.2;">Google Play</span>
+  </span>
+</a>
+</div>
+  </div>
+</div>
+<div class="f-pair">
+  <div class="f-tile" style="padding: clamp(28px, 3vw, 40px) clamp(24px, 2.6vw, 36px); border-left: 1px solid #1E1E1E; border-bottom: 1px solid #1E1E1E; margin-left: -1px; display: flex; flex-direction: column; gap: 20px;">
+    <span style="display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="shield-tick" size="18"></isax-icon>Legal</span>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+    <a href="https://s3.us-east-1.amazonaws.com/aws-jggl-main-prod-s3-jggl-bucket/docs/privacy-policy.pdf" target="_blank" rel="noopener" style="font-size: 16px; color: #A5A29E;">Privacy Policy</a>
+    <a href="https://s3.us-east-1.amazonaws.com/aws-jggl-main-prod-s3-jggl-bucket/docs/terms-of-use.pdf" target="_blank" rel="noopener" style="font-size: 16px; color: #A5A29E;">Terms of Use</a>
+  </div>
+  </div>
+  <div class="f-tile" style="padding: clamp(28px, 3vw, 40px) clamp(24px, 2.6vw, 36px); border-left: 1px solid #1E1E1E; border-bottom: 1px solid #1E1E1E; margin-left: -1px; display: flex; flex-direction: column; gap: 20px;">
+    <span style="display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);"><isax-icon name="message-text" size="18"></isax-icon>Contact</span>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+    <a href="mailto:support@jggl.ai" style="font-size: 16px; color: #A5A29E;">support@jggl.ai</a>
+  </div>
+  </div>
+</div>
+  </div>
+  <div class="legal">
+    <span style="font-size: 14px; color: #56534F;">© 2026 JGGL Entertainment Limited</span>
+    <span class="legal-links">
+      <a href="https://s3.us-east-1.amazonaws.com/aws-jggl-main-prod-s3-jggl-bucket/docs/privacy-policy.pdf" target="_blank" rel="noopener" style="color: #56534F;">Privacy Policy</a>
+      <a href="https://s3.us-east-1.amazonaws.com/aws-jggl-main-prod-s3-jggl-bucket/docs/terms-of-use.pdf" target="_blank" rel="noopener" style="color: #56534F;">Terms of Use</a>
+    </span>
+  </div>
+</footer>
+
+<div data-modal class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 32px 24px; background: rgba(4,4,4,0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); opacity: 0; transition: opacity .4s cubic-bezier(.2,.7,.2,1);">
+  <div data-modal-panel class="modal-panel" style="position: relative; width: min(780px, 100%); max-height: 100%; border: 1px solid #262421; border-radius: 32px; background: #0C0C0C; overflow: hidden auto; box-shadow: 0 40px 120px rgba(0,0,0,0.72); transform: translateY(26px) scale(0.985); opacity: 0; transition: opacity .5s cubic-bezier(.2,.7,.2,1), transform .5s cubic-bezier(.2,.7,.2,1);">
+    <span aria-hidden="true" style="position: absolute; z-index: 1; left: -10%; top: 30%; width: 60%; height: 70%; background: radial-gradient(circle, rgba(255,108,25,0.16), rgba(255,108,25,0) 68%); pointer-events: none;"></span>
+    <button class="modal-close" data-close-modal aria-label="Close" style="position: absolute; z-index: 4; top: 22px; right: 22px; width: 42px; height: 42px; border-radius: 999px; border: 1px solid #262421; background: rgba(10,10,10,0.55); backdrop-filter: blur(16px) saturate(1.2); -webkit-backdrop-filter: blur(16px) saturate(1.2); color: #E4E1DD; font-family: inherit; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color .3s ease, border-color .3s ease, background .3s ease;">✕</button>
+    <div class="modal-grid" style="position: relative; z-index: 2; display: flex; flex-direction: column;">
+      <div class="modal-art" style="position: relative; height: 300px; overflow: hidden; display: flex; align-items: flex-start; justify-content: center; background: #080808;">
+        <img src="https://jggl.ai/images/app/feed-mockup.webp" alt="JGGL App on iPhone" style="width: 100%; max-width: none; display: block; transform: translateY(-4%);">
+        <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,12,0) 38%, #0C0C0C 100%); pointer-events: none;"></span>
+      </div>
+      <div class="modal-copy" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; padding: 8px clamp(28px, 5vw, 72px) clamp(44px, 5vw, 60px);">
+        <span style="display: inline-flex; align-items: center; gap: 9px; padding: 8px 16px; border: 1px solid rgba(255,108,25,0.32); border-radius: 999px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; color: var(--accent); white-space: nowrap;"><isax-icon name="magicpen" size="15" stroke-width="2.1"></isax-icon>Free to download</span>
+        <h2 id="modal-title" style="margin: 0; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.08; font-weight: 500; letter-spacing: -0.032em; max-width: 19ch; text-wrap: pretty;">The full AI pipeline runs in the JGGL App</h2>
+        <p style="margin: 0; font-size: clamp(16px, 1.3vw, 20px); line-height: 1.6; color: #8B8884; max-width: 46ch; text-wrap: pretty;">Images, music, video and voice. Download it, and the request you just typed will be waiting for you in chat.</p>
+<div class="modal-cta" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+<a class="store-pill" href="https://apps.apple.com/us/app/jggl-ai-social-network/id6739490240" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; padding: 13px 26px; border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap; text-align: left;">
+  <img src="assets/apple.svg" alt="" width="22" height="22" style="width: 22px; height: 22px;">
+  <span style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 13px; color: #9A9793;">Download on the</span>
+    <span style="font-size: 19px; font-weight: 500; letter-spacing: -0.016em;">App Store</span>
+  </span>
+</a>
+<a class="store-pill" href="https://play.google.com/store/apps/details?id=ai.jggl.app" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; padding: 13px 26px; border: 1px solid #2A2825; border-radius: 999px; background: #0A0A0A; white-space: nowrap; text-align: left;">
+  <img src="assets/google-play.svg" alt="" width="21" height="21" style="width: 21px; height: 21px;">
+  <span style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 13px; color: #9A9793;">Get it on</span>
+    <span style="font-size: 19px; font-weight: 500; letter-spacing: -0.016em;">Google Play</span>
+  </span>
+</a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

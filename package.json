@@ -1,0 +1,11 @@
+{
+  "name": "jggl-site",
+  "version": "4.0.0",
+  "private": true,
+  "description": "JGGL marketing site \u2014 implementation of the JGGL Site V4 design",
+  "scripts": {
+    "build": "node build/generate.js",
+    "fetch-remote": "node build/fetch-remote.js",
+    "standalone": "node build/fetch-remote.js && node build/generate.js && node build/standalone.js"
+  }
+}
