@@ -113,7 +113,23 @@ img { display: block; max-width: 100%; }
 
 .d-only { display: block; }
 .m-only { display: none; }
-.hero-grid { display: grid; grid-template-columns: 1fr 1.04fr; gap: clamp(28px, 4vw, 64px); align-items: stretch; }
+/* Hero из трёх частей. На десктопе текст и поле ввода стоят друг под
+   другом в левой колонке, галерея занимает правую целиком. На мобильных
+   порядок другой: заголовок, галерея, поле ввода. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.04fr;
+  grid-template-areas:
+    "copy media"
+    "composer media";
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(28px, 4vw, 64px);
+  row-gap: clamp(28px, 4vw, 44px);
+  align-items: stretch;
+}
+.hero-copy { grid-area: copy; }
+.hero-composer { grid-area: composer; }
+.hero-media { grid-area: media; }
 
 /* Плитка выбора формата под hero: шесть миниатюр всегда в один ряд.
    На узких экранах они уменьшаются, а не переносятся на второй ряд —
@@ -144,7 +160,11 @@ img { display: block; max-width: 100%; }
   .b7, .b5, .b4, .b8 { grid-column: 1 / -1; grid-row: auto; }
 }
 @media (max-width: 979px) {
-  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "copy" "media" "composer";
+    grid-template-rows: auto auto auto;
+  }
 }
 @media (max-width: 899px) {
   .d-only { display: none; }
