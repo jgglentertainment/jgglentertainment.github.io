@@ -11,12 +11,12 @@
 
   /* Kept in step with build/data.js — only the fields the runtime needs. */
   var FORMATS = [
-    { label: 'Text',  icon: 'message-text', ph: 'Draft a launch note for the autumn campaign',      media: 'https://jggl.ai/images/app/one-assistant.webp' },
-    { label: 'Music', icon: 'musicnote',    ph: 'Write a synthwave track with cloned vocals',       media: 'https://jggl.ai/images/app/studio-sound.webp' },
-    { label: 'Image', icon: 'gallery',      ph: 'Build a moodboard for an autumn campaign',         media: 'https://jggl.ai/images/app/authors-grid.webp' },
-    { label: 'Video', icon: 'video',        ph: 'Assemble a reel from the track and three stills',  media: 'https://jggl.ai/images/app/feed-mockup-mobile.webp' },
-    { label: 'Voice', icon: 'microphone-2', ph: 'Read the caption in my cloned voice',              media: 'https://jggl.ai/images/app/voice-cloning.webp' },
-    { label: 'Ads',   icon: 'trend-up',     ph: 'Promote this post to a 25–34 audience',            media: 'https://jggl.ai/images/app/web3-globe.webp' }
+    { label: 'Text',  icon: 'message-text', ph: 'Draft a launch note for the autumn campaign',      media: 'assets/media/one-assistant.webp' },
+    { label: 'Music', icon: 'musicnote',    ph: 'Write a synthwave track with cloned vocals',       media: 'assets/media/studio-sound.webp' },
+    { label: 'Image', icon: 'gallery',      ph: 'Build a moodboard for an autumn campaign',         media: 'assets/media/authors-grid.webp' },
+    { label: 'Video', icon: 'video',        ph: 'Assemble a reel from the track and three stills',  media: 'assets/media/feed-mockup-mobile.webp' },
+    { label: 'Voice', icon: 'microphone-2', ph: 'Read the caption in my cloned voice',              media: 'assets/media/voice-cloning.webp' },
+    { label: 'Ads',   icon: 'trend-up',     ph: 'Promote this post to a 25–34 audience',            media: 'assets/media/web3-globe.webp' }
   ];
 
   var SECTIONS = ['ecosystem', 'pipeline', 'category', 'faq', 'get-started'];
