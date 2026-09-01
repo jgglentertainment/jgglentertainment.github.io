@@ -339,11 +339,98 @@
     overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
   }
 
+  /* ---------------- comparison carousel (mobile) ---------------- */
+
+  function initComparison() {
+    var rail = $('.cmp-rail');
+    var dots = $$('.cmp-dot');
+    if (!rail || !dots.length) return;
+
+    var cards = function () { return $$('.cmp-card', rail); };
+
+    /* Positions come from getBoundingClientRect: offsetLeft is measured
+       from the nearest positioned ancestor, and the rail is static. */
+    function activeIndex() {
+      var rr = rail.getBoundingClientRect();
+      var atEnd = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 2;
+      var list = cards();
+      if (atEnd) return list.length - 1;   // last card snaps to its right edge
+      var best = 0, bestDist = Infinity;
+      list.forEach(function (c, i) {
+        var d = Math.abs(c.getBoundingClientRect().left - rr.left);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      return best;
+    }
+
+    function setActive(n) {
+      dots.forEach(function (d, i) {
+        var on = i === n;
+        d.classList.toggle('is-active', on);
+        if (on) d.setAttribute('aria-current', 'true');
+        else d.removeAttribute('aria-current');
+      });
+    }
+
+    function paint() { setActive(activeIndex()); }
+
+    /* Cheap enough to run straight off the scroll event; rAF would stall
+       in a background tab and leave the dots on a stale card. */
+    rail.addEventListener('scroll', paint, { passive: true });
+
+    function goTo(n) {
+      var c = cards()[n];
+      if (!c) return;
+      setActive(n);                       // respond to the tap immediately
+      var delta = c.getBoundingClientRect().left - rail.getBoundingClientRect().left;
+      rail.scrollTo({
+        left: rail.scrollLeft + delta,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+    }
+
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        goTo(parseInt(d.getAttribute('data-cmp-go'), 10));
+      });
+    });
+
+    /* Touch swipes the rail natively. A mouse cannot, so drag it instead —
+       snapping is switched off mid-drag or it fights every frame. */
+    var drag = null;
+    rail.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      drag = { x: e.clientX, left: rail.scrollLeft };
+      rail.classList.add('is-dragging');
+      rail.style.scrollSnapType = 'none';
+      try { rail.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    rail.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      rail.scrollLeft = drag.left - (e.clientX - drag.x);
+      paint();
+    });
+    function endDrag() {
+      if (!drag) return;
+      drag = null;
+      rail.classList.remove('is-dragging');
+      rail.style.scrollSnapType = '';
+      goTo(activeIndex());
+    }
+    rail.addEventListener('pointerup', endDrag);
+    rail.addEventListener('pointercancel', endDrag);
+    rail.addEventListener('pointerleave', endDrag);
+
+    window.addEventListener('resize', paint, { passive: true });
+    paint();
+  }
+
   function init() {
     initReveals();
     var hero = initHero();
     initFaq();
     initNav();
+    initComparison();
     initModal(hero);
   }
 

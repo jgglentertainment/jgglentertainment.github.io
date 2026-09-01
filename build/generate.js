@@ -335,7 +335,7 @@ const narrowCards = D.ROWS.map((r) => {
   const cells = [{ jggl: true, v: r.v1 }].concat(
     D.BRANDS.map((b, i) => ({ jggl: false, brand: b, v: [r.v2, r.v3, r.v4, r.v5, r.v6][i] }))
   );
-  return `<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+  return `<div class="cmp-card" style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
   <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">${esc(r.cap)}</div>
   <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">${esc(r.note)}</div>
   <div style="margin-top: 18px; display: flex; flex-direction: column;">
@@ -351,6 +351,10 @@ ${cells.map((c) => `    <div style="display: flex; align-items: center; justify-
 </div>`;
 }).join('\n');
 
+const cmpDots = D.ROWS.map((r, i) =>
+  `        <button class="cmp-dot${i === 0 ? ' is-active' : ''}" data-cmp-go="${i}"` +
+  ` aria-label="Show: ${esc(r.cap)}"${i === 0 ? ' aria-current="true"' : ''}></button>`).join('\n');
+
 const category = `<section id="category" style="padding: var(--sp) 0 0; scroll-margin-top: 110px;">
   <div style="${cardBase} padding: clamp(10px, 1.2vw, 16px);">
     <div style="padding: clamp(24px, 3vw, 32px) clamp(14px, 2vw, 24px) clamp(26px, 3.4vw, 36px); text-align: center;">
@@ -363,8 +367,11 @@ ${tableHead}
 ${tableRows}
     </div>
     <div class="t-narrow">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div class="cmp-rail" tabindex="0" role="group" aria-label="Capability comparison, ${D.ROWS.length} cards">
 ${narrowCards}
+      </div>
+      <div class="cmp-dots">
+${cmpDots}
       </div>
     </div>
   </div>

@@ -198,6 +198,47 @@ img { display: block; max-width: 100%; }
   .t-narrow { display: block; }
 }
 
+/* Карусель карточек сравнения. Живёт внутри .t-narrow, который показан
+   только до 819px, поэтому на десктопе эти правила ни к чему не применяются
+   — там остаётся широкая таблица. */
+.cmp-rail {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x pan-y;
+}
+.cmp-rail::-webkit-scrollbar { display: none; }
+.cmp-card {
+  /* На 40px уже ленты — на этот край видно следующую карточку. */
+  flex: 0 0 calc(100% - 40px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+/* Последняя прилипает правым краем: тогда отступ справа от неё такой же,
+   как слева у первой, и в конце ленты выглядывает предыдущая карточка. */
+.cmp-card:last-of-type { scroll-snap-align: end; }
+@media (pointer: fine) {
+  .cmp-rail { cursor: grab; }
+  .cmp-rail.is-dragging { cursor: grabbing; }
+}
+.cmp-rail.is-dragging .cmp-card { user-select: none; }
+
+.cmp-dots { display: flex; justify-content: center; gap: 9px; padding: 18px 0 6px; }
+.cmp-dot {
+  width: 7px; height: 7px; padding: 0;
+  border: 0; border-radius: 999px;
+  background: #35322E;
+  cursor: pointer;
+  transition: background .3s ease, width .3s cubic-bezier(.2,.7,.2,1);
+}
+.cmp-dot.is-active { background: var(--accent); width: 22px; }
+.cmp-dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .cmp-dot { transition: none; } }
+
 .f-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
 @media (max-width: 719px) {
   .f-pair { grid-template-columns: 1fr 1fr; }

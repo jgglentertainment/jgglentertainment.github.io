@@ -14,9 +14,9 @@
 <meta property="og:description" content="A single assistant replaces a dozen services: text, images, music, video, voice and advertising are produced and distributed in one workflow.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=f4762a6c">
+<link rel="stylesheet" href="styles.css?v=71e203df">
 <script src="assets/iconsax.js?v=e8960c15" defer></script>
-<script src="app.js?v=a94ab97d" defer></script>
+<script src="app.js?v=b43a628d" defer></script>
 </head>
 <body>
 <div style="position: relative; min-height: 100vh; background: #0A0A0A; padding: 0 clamp(14px, 2vw, 24px);">
@@ -477,8 +477,8 @@
 </div>
     </div>
     <div class="t-narrow">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+      <div class="cmp-rail" tabindex="0" role="group" aria-label="Capability comparison, 3 cards">
+<div class="cmp-card" style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
   <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">AI generation across formats</div>
   <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">Text, image, music, video and voice</div>
   <div style="margin-top: 18px; display: flex; flex-direction: column;">
@@ -520,7 +520,7 @@
     </div>
   </div>
 </div>
-<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+<div class="cmp-card" style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
   <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">Distribution surface</div>
   <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">A feed for published work</div>
   <div style="margin-top: 18px; display: flex; flex-direction: column;">
@@ -562,7 +562,7 @@
     </div>
   </div>
 </div>
-<div style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
+<div class="cmp-card" style="border-radius: 20px; background: #0A0A0A; padding: 22px 20px;">
   <div style="font-size: 19px; letter-spacing: -0.018em; color: #E6E3DF; text-wrap: pretty;">End-to-end production cycle</div>
   <div style="margin-top: 6px; font-size: 15px; color: #6E6B67; text-wrap: pretty;">Create, publish and promote in one flow</div>
   <div style="margin-top: 18px; display: flex; flex-direction: column;">
@@ -604,6 +604,11 @@
     </div>
   </div>
 </div>
+      </div>
+      <div class="cmp-dots">
+        <button class="cmp-dot is-active" data-cmp-go="0" aria-label="Show: AI generation across formats" aria-current="true"></button>
+        <button class="cmp-dot" data-cmp-go="1" aria-label="Show: Distribution surface"></button>
+        <button class="cmp-dot" data-cmp-go="2" aria-label="Show: End-to-end production cycle"></button>
       </div>
     </div>
   </div>
