@@ -146,8 +146,10 @@ img { display: block; max-width: 100%; }
   .f-pair { grid-template-columns: 1fr 1fr; }
   .f-tile { padding: 24px 18px !important; gap: 16px !important; }
   .f-tile a { font-size: 15px !important; }
-  .f-stores { flex-direction: row !important; gap: 8px !important; }
-  .f-stores > a { flex: 1 1 0; justify-content: center; padding: 10px 10px !important; gap: 8px !important; }
+  /* Кнопки сторов друг под другом: в ряд они не помещаются
+     в узкой плитке футера на мобильной ширине. */
+  .f-stores { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; }
+  .f-stores > a { justify-content: center; padding: 10px 12px !important; gap: 10px !important; }
   .f-stores .st-sub { display: none; }
   .f-stores .st-name { font-size: 13px !important; }
 }
