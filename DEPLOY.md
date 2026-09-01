@@ -1,71 +1,41 @@
-# Деплой на Render
+# Деплой
 
-Репозиторий уже подготовлен: сделан коммит, добавлены `.gitignore` и
-`render.yaml`, файлы сайта лежат в `public/`.
+Сайт опубликован на **GitHub Pages**: https://vasilevaxco.github.io/jggl-site/
 
-Осталось три шага. Первые два требуют входа в аккаунт, поэтому их
-нужно сделать самому — пароли и регистрацию за тебя я не ввожу.
+Источник — ветка `gh-pages`, в её корне лежит содержимое `public/`.
+Файл `.nojekyll` отключает обработку Jekyll, чтобы файлы отдавались как есть.
 
-## 1. Аккаунт GitHub
+## Обновить сайт
 
-Если аккаунта ещё нет — https://github.com/signup (2 минуты).
-
-Затем авторизовать CLI (уже установлен, `gh 2.98.0`):
+Правки текста — в `build/data.js`. Затем:
 
 ```bash
-gh auth login
+npm run build
+git commit -am "правки"
+git push origin main
+npm run publish
 ```
 
-Выбирай: `GitHub.com` → `HTTPS` → `Login with a web browser`.
-
-## 2. Залить репозиторий
-
-Одной командой из папки проекта:
-
-```bash
-cd ~/jggl-site && gh repo create jggl-site --private --source=. --remote=origin --push
-```
-
-`--private` можно заменить на `--public`. Render одинаково работает с обоими,
-приватный просто требует подключения GitHub-аккаунта (шаг 3 это и делает).
-
-## 3. Render
-
-Открыть https://dashboard.render.com/static/new и подключить репозиторий
-`jggl-site`. Значения полей:
-
-| Поле              | Значение        |
-|-------------------|-----------------|
-| Name              | `jggl-site`     |
-| Branch            | `main`          |
-| Root Directory    | *(пусто)*       |
-| Build Command     | `npm run build` |
-| Publish Directory | `public`        |
-
-Дальше **Create Static Site**. Первая сборка — меньше минуты: зависимостей
-нет, `npm run build` только рендерит `public/index.html` из `build/data.js`.
-
-Сайт появится на `https://jggl-site.onrender.com` (или на том имени,
-которое задашь в Name).
-
-### Вместо ручной формы
-
-В репозитории лежит `render.yaml`, поэтому можно вместо формы завести
-Blueprint: https://dashboard.render.com/blueprints → **New Blueprint
-Instance** → выбрать репозиторий. Тогда все настройки, включая заголовки
-кеширования, подтянутся из файла.
-
-## Дальше
-
-Каждый `git push` в `main` пересобирает и публикует сайт автоматически.
-Правки текста — в `build/data.js`, затем:
-
-```bash
-npm run build && git commit -am "текст" && git push
-```
+`npm run publish` пересобирает `public/` и выталкивает его в корень
+ветки `gh-pages` через `git subtree push`. Обновление появляется на сайте
+через 30–60 секунд.
 
 ## Свой домен
 
-Render → сервис → **Settings** → **Custom Domains** → добавить домен,
-затем прописать у регистратора CNAME на выданный Render адрес.
-Сертификат Render выпустит сам.
+Settings → Pages → Custom domain у репозитория, затем CNAME у регистратора
+на `vasilevaxco.github.io`. Сертификат GitHub выпустит сам. После этого
+добавь файл `public/CNAME` с доменом, иначе следующий `npm run publish`
+сбросит настройку.
+
+## Почему не Render
+
+Render требует привязку банковской карты для верификации личности — даже
+для бесплатных статических сайтов. Конфигурация под Render осталась в
+`render.yaml` (build `npm run build`, publish `public`), так что при
+желании перейти туда достаточно подключить репозиторий и добавить карту.
+
+## Альтернативы без карты
+
+Cloudflare Pages и Netlify тоже бесплатны и не требуют карту, работают с
+приватным репозиторием. Обоим достаточно тех же настроек: build command
+`npm run build`, output directory `public`.
