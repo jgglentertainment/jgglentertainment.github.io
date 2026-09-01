@@ -9,5 +9,9 @@
     "standalone": "node build/fetch-remote.js && node build/generate.js && node build/standalone.js",
     "publish": "npm run build && git subtree push --prefix public origin gh-pages"
   },
-  "homepage": "https://vasilevaxco.github.io/jggl-site/"
+  "homepage": "https://jgglentertainment.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgglentertainment/jgglentertainment.github.io.git"
+  }
 }
