@@ -115,11 +115,22 @@ img { display: block; max-width: 100%; }
 .m-only { display: none; }
 .hero-grid { display: grid; grid-template-columns: 1fr 1.04fr; gap: clamp(28px, 4vw, 64px); align-items: stretch; }
 
-/* Плитка выбора формата под hero: шесть миниатюр в ряд, на узких
-   экранах — в два ряда по три, иначе они становятся нечитаемыми. */
+/* Плитка выбора формата под hero: шесть миниатюр всегда в один ряд.
+   На узких экранах они уменьшаются, а не переносятся на второй ряд —
+   иначе панель закрывает галерею за ней. Инлайновые стили панели
+   перебиваются !important. */
 .hero-thumbs { width: min(94%, 470px); display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
 @media (max-width: 620px) {
-  .hero-thumbs { width: min(94%, 340px); grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .hero-thumbs {
+    width: min(96%, 330px);
+    gap: 4px;
+    padding: 6px !important;
+    bottom: 10px !important;
+    border-radius: 12px !important;
+  }
+  .hero-thumbs .thumb { gap: 3px !important; }
+  .hero-thumbs .thumb-ring { border-radius: 7px !important; border-width: 1.2px !important; }
+  .hero-thumbs .thumb-label { font-size: 9px !important; }
 }
 
 /* Pipeline bento grid. */
