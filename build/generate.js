@@ -5,7 +5,17 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const D = require('./data.js');
+
+/* Кэш-бастинг: GitHub Pages отдаёт статику с max-age=600, поэтому после
+   деплоя браузер может подставить старый CSS к новому HTML и сломать
+   вёрстку. Версия в ссылке меняется вместе с содержимым файла. */
+const ver = (rel) => crypto
+  .createHash('sha1')
+  .update(fs.readFileSync(path.join(__dirname, '..', 'public', rel)))
+  .digest('hex')
+  .slice(0, 8);
 
 const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -473,9 +483,9 @@ const html = `<!DOCTYPE html>
 <meta property="og:description" content="${esc(DESC)}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css">
-<script src="assets/iconsax.js" defer></script>
-<script src="app.js" defer></script>
+<link rel="stylesheet" href="styles.css?v=${ver('styles.css')}">
+<script src="assets/iconsax.js?v=${ver('assets/iconsax.js')}" defer></script>
+<script src="app.js?v=${ver('app.js')}" defer></script>
 </head>
 <body>
 <div style="position: relative; min-height: 100vh; background: #0A0A0A; padding: 0 clamp(14px, 2vw, 24px);">
