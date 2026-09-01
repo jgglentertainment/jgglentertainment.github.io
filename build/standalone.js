@@ -3,20 +3,16 @@
    sharing a preview where no server (and no network) is available.
 
    Assets are deduplicated into one map and applied to elements by a small
-   inline loader — several assets (the footer note, the store badges) are
-   referenced many times, and inlining each occurrence separately more
-   than doubled the file. This is the only build that needs JS to show its
-   images; the shipped site (index.html) still renders fully without it.
-
-   Remote media is cached in build/.cache/ — run `npm run fetch-remote`
-   first, or this reports what is missing and stops. */
+   inline loader — several assets are referenced many times, and inlining
+   each occurrence separately more than doubled the file. This is the only
+   build that needs JS to show its images; the shipped site (public/index.html)
+   still renders fully without it. */
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..', 'public');
 const OUT = path.join(__dirname, '..', 'dist');
-const CACHE = path.join(__dirname, '.cache');
 
 const MIME = {
   '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml',
@@ -28,18 +24,16 @@ const dataUri = (file) => {
   return 'data:' + mime + ';base64,' + fs.readFileSync(file).toString('base64');
 };
 
-const cacheName = (url) => url.replace('https://jggl.ai/', '').replace(/\//g, '__');
-
 let html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 let css = fs.readFileSync(path.join(ROOT, 'styles.css'), 'utf8');
 const iconsax = fs.readFileSync(path.join(ROOT, 'assets/iconsax.js'), 'utf8');
 let app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
 
 /* ---- asset map: one entry per unique file ---- */
-const KEYS = new Map();      // absolute path -> key
-const ASSETS = {};           // key -> data URI
-function key(file) {
-  const abs = path.resolve(file);
+const KEYS = new Map();
+const ASSETS = {};
+function key(rel) {
+  const abs = path.resolve(ROOT, rel);
   if (!KEYS.has(abs)) {
     const k = 'a' + KEYS.size;
     KEYS.set(abs, k);
@@ -48,30 +42,22 @@ function key(file) {
   return KEYS.get(abs);
 }
 
-/* ---- verify the remote cache ---- */
-const remote = [...new Set(html.match(/https:\/\/jggl\.ai\/[^"' )]+/g) || [])];
-const missing = remote.filter((u) => !fs.existsSync(path.join(CACHE, cacheName(u))));
-if (missing.length) {
-  console.error('Missing from build/.cache — run `npm run fetch-remote`:');
-  missing.forEach((u) => console.error('  ' + u));
-  process.exit(1);
-}
-
-/* ---- fonts: inlined directly, only a handful of references ---- */
+/* ---- fonts inlined straight into the stylesheet ---- */
 css = css.replace(/url\("(assets\/fonts\/[^"]+)"\)/g,
   (_, rel) => 'url("' + dataUri(path.join(ROOT, rel)) + '")');
 
-/* ---- markup: point every asset reference at a map key ---- */
-html = html.replace(/(src|href)="(assets\/[^"]+\.(?:png|svg))"/g,
-  (_, attr, rel) => attr + '="" data-a="' + key(path.join(ROOT, rel)) + '"');
+/* ---- every asset reference in the markup points at a map key ----
+   src= for <img>/<video>, url= for <jggl-media>, href= for the favicons.
+   Cache-busting query strings are stripped before resolving on disk. */
+html = html.replace(
+  /(src|href|url)="(assets\/[^"]+\.(?:png|svg|webp|mp4|webm))(\?v=[a-f0-9]+)?"/g,
+  (_, attr, rel) => attr + '="" data-a="' + key(rel) + '"');
 
-html = html.replace(/(src|url)="(https:\/\/jggl\.ai\/[^"]+)"/g,
-  (_, attr, url) => attr + '="" data-a="' + key(path.join(CACHE, cacheName(url))) + '"');
-
-/* app.js swaps hero media by URL, so it needs the map too. */
-for (const url of [...new Set(app.match(/https:\/\/jggl\.ai\/[^'"]+/g) || [])]) {
-  const f = path.join(CACHE, cacheName(url));
-  if (fs.existsSync(f)) app = app.split(url).join('__ASSET__' + key(f));
+/* app.js carries the hero media paths too. */
+for (const rel of [...new Set(app.match(/assets\/media\/[^'"]+/g) || [])]) {
+  if (fs.existsSync(path.resolve(ROOT, rel))) {
+    app = app.split(rel).join('__ASSET__' + key(rel));
+  }
 }
 
 /* jggl-media picks <video> vs <img> from the file extension, which a
@@ -95,7 +81,6 @@ const loader = `
     if (!v) return;
     el.setAttribute(el.tagName === 'JGGL-MEDIA' ? 'url' : 'src', v);
   });
-  // app.js refers to hero media by map key.
   window.__resolveAsset = function (u) {
     return (u && u.indexOf('__ASSET__') === 0) ? (A[u.slice(9)] || u) : u;
   };
@@ -115,12 +100,12 @@ const out = [
   '<script>window.__A=' + JSON.stringify(ASSETS) + ';</script>',
   '<script>', loader, '</script>',
   '<script>', patchedIconsax, '</script>',
-  '<script>', app.replace(/__ASSET__(a\d+)/g, (m) => m), '</script>'
+  '<script>', app, '</script>'
 ].join('\n');
 
+fs.mkdirSync(OUT, { recursive: true });
 const dest = path.join(OUT, 'jggl-site-standalone.html');
-fs.mkdirSync(path.dirname(dest), { recursive: true });
 fs.writeFileSync(dest, out);
 console.log('wrote', dest);
 console.log('size', (Buffer.byteLength(out) / 1048576).toFixed(2), 'MB');
-console.log('unique assets inlined:', KEYS.size, '(from', remote.length, 'remote +', 'local)');
+console.log('unique assets inlined:', KEYS.size);

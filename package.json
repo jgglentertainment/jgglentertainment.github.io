@@ -5,9 +5,8 @@
   "description": "JGGL marketing site \u2014 implementation of the JGGL Site V4 design",
   "scripts": {
     "build": "node build/generate.js",
-    "fetch-remote": "node build/fetch-remote.js",
-    "standalone": "node build/fetch-remote.js && node build/generate.js && node build/standalone.js",
-    "publish": "npm run build && git subtree push --prefix public origin gh-pages"
+    "publish": "npm run build && git subtree push --prefix public origin gh-pages",
+    "standalone": "npm run build && node build/standalone.js"
   },
   "homepage": "https://jgglentertainment.github.io/",
   "repository": {

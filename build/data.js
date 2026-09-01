@@ -5,12 +5,12 @@ const APP_STORE = 'https://apps.apple.com/us/app/jggl-ai-social-network/id673949
 const PLAY_STORE = 'https://play.google.com/store/apps/details?id=ai.jggl.app';
 
 const FORMATS = [
-  { label: 'Text',  icon: 'message-text',  ph: 'Draft a launch note for the autumn campaign',   media: 'https://jggl.ai/images/app/one-assistant.webp' },
-  { label: 'Music', icon: 'musicnote',     ph: 'Write a synthwave track with cloned vocals',    media: 'https://jggl.ai/images/app/studio-sound.webp' },
-  { label: 'Image', icon: 'gallery',       ph: 'Build a moodboard for an autumn campaign',      media: 'https://jggl.ai/images/app/authors-grid.webp' },
-  { label: 'Video', icon: 'video',         ph: 'Assemble a reel from the track and three stills', media: 'https://jggl.ai/images/app/feed-mockup-mobile.webp' },
-  { label: 'Voice', icon: 'microphone-2',  ph: 'Read the caption in my cloned voice',           media: 'https://jggl.ai/images/app/voice-cloning.webp' },
-  { label: 'Ads',   icon: 'trend-up',      ph: 'Promote this post to a 25–34 audience',         media: 'https://jggl.ai/images/app/web3-globe.webp' }
+  { label: 'Text',  icon: 'message-text',  ph: 'Draft a launch note for the autumn campaign',   media: 'assets/media/one-assistant.webp' },
+  { label: 'Music', icon: 'musicnote',     ph: 'Write a synthwave track with cloned vocals',    media: 'assets/media/studio-sound.webp' },
+  { label: 'Image', icon: 'gallery',       ph: 'Build a moodboard for an autumn campaign',      media: 'assets/media/authors-grid.webp' },
+  { label: 'Video', icon: 'video',         ph: 'Assemble a reel from the track and three stills', media: 'assets/media/feed-mockup-mobile.webp' },
+  { label: 'Voice', icon: 'microphone-2',  ph: 'Read the caption in my cloned voice',           media: 'assets/media/voice-cloning.webp' },
+  { label: 'Ads',   icon: 'trend-up',      ph: 'Promote this post to a 25–34 audience',         media: 'assets/media/web3-globe.webp' }
 ];
 
 /* Which formats get a thumbnail under the hero media — all of them, in
@@ -31,24 +31,24 @@ const MARQUEE = [
 const REPLACED = ['Midjourney', 'Suno', 'ChatGPT', 'Video editor', 'Ads dashboard'];
 
 const BRANDS = [
-  { src: 'https://jggl.ai/images/brands/instagram.svg',  alt: 'Instagram' },
-  { src: 'https://jggl.ai/images/brands/tiktok.svg',     alt: 'TikTok' },
-  { src: 'https://jggl.ai/images/brands/midjourney.svg', alt: 'Midjourney', invert: true },
-  { src: 'https://jggl.ai/images/brands/suno.svg',       alt: 'Suno' },
-  { src: 'https://jggl.ai/images/brands/openai.svg',     alt: 'OpenAI' }
+  { src: 'assets/media/brands/instagram.svg',  alt: 'Instagram' },
+  { src: 'assets/media/brands/tiktok.svg',     alt: 'TikTok' },
+  { src: 'assets/media/brands/midjourney.svg', alt: 'Midjourney', invert: true },
+  { src: 'assets/media/brands/suno.svg',       alt: 'Suno' },
+  { src: 'assets/media/brands/openai.svg',     alt: 'OpenAI' }
 ];
 
 const PRODUCTS = [
   {
     title: 'JGGL App', icon: 'monitor', route: '/app', fit: 'cover', bg: '#060606',
     text: 'A social network combining a 360 Feed, a messenger and AI tools. Music, video, voice and advertising are produced through a single AI-powered chat.',
-    media: 'https://jggl.ai/images/app/feed-mockup-mobile.webp', alt: 'JGGL App 360 Feed',
+    media: 'assets/media/feed-mockup-mobile.webp', alt: 'JGGL App 360 Feed',
     meta: [{ k: 'Status', v: 'Available now' }, { k: 'Platforms', v: 'iOS · Android' }, { k: 'Release', v: 'v1.0.9' }]
   },
   {
     title: 'JGGL Buddy', icon: 'speaker', route: '/buddy', fit: 'cover', bg: '#060606',
     text: 'A device built for direct interaction: a 360° holographic dome, an AI avatar and a marketplace of personalities.',
-    media: 'https://jggl.ai/videos/products/buddy.webm', alt: 'JGGL Buddy device',
+    media: 'assets/media/buddy.webm', alt: 'JGGL Buddy device',
     meta: [{ k: 'Status', v: 'In development' }, { k: 'Form factor', v: 'Speaker · 360° dome' }, { k: 'Market', v: '$15.6B → $65B by 2034' }]
   }
 ];

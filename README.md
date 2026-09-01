@@ -16,8 +16,8 @@ public/app.js            interaction layer
 public/assets/           icons, logos, self-hosted fonts
 build/data.js            all site copy and content lists
 build/generate.js        renders public/index.html from data.js
+public/assets/media/     photography, product imagery and video
 build/standalone.js      optional single-file build (everything inlined)
-build/fetch-remote.js    caches jggl.ai media for the standalone build
 ```
 
 ## Editing
@@ -61,13 +61,16 @@ markup:
 - `<jggl-media url alt fit>` — image or video, chosen by file extension
 
 Local assets: `apple.svg`, `google-play.svg`, `jggl-mark.png`, `note.png`,
-and an Instrument Sans woff2 subset in `public/assets/fonts/`.
+the favicon set, an Instrument Sans woff2 subset in `public/assets/fonts/`,
+and all photography and video in `public/assets/media/`.
 
 `Scoutie Sans` is the brand face. It is not bundled, so it stays first in the
 font stack with Instrument Sans as the fallback.
 
-Photography, product imagery and video load from `https://jggl.ai` at
-runtime. Nothing else is fetched.
+Everything the page needs is served from its own origin — the page makes
+no third-party requests at all. Media used to load from `https://jggl.ai`;
+that domain resolves to AWS in the US and turned out to be unreachable on
+some networks, which left visitors with a working page and no images.
 
 ## Local preview
 

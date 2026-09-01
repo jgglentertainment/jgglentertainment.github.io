@@ -162,7 +162,7 @@ ${formatMenu}
           </div>
           <span style="font-size: 16px; color: #8B8884;">One engine — every format</span>
           <button class="send-btn" data-open-modal aria-label="Send to the assistant" style="margin-left: auto; width: 62px; height: 62px; padding: 0; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex: none; transition: transform .3s cubic-bezier(.2,.7,.2,1);">
-            <img src="https://jggl.ai/seo/jggl-send.webp" alt="" width="62" height="62" style="width: 62px; height: 62px; object-fit: contain;">
+            <img src="assets/media/jggl-send.webp" alt="" width="62" height="62" style="width: 62px; height: 62px; object-fit: contain;">
           </button>
         </div>
       </div>
@@ -252,7 +252,7 @@ ${kicker('magicpen', 'Guided production')}
         <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #8B8884; max-width: 52ch; text-wrap: pretty;">The assistant proposes what to create and which audience to address, which extends authorship across the entire user base.</p>
       </div>
       <div style="margin-top: auto; border-radius: 20px; background: #060606; height: clamp(220px, 34vw, 400px); width: 100%; overflow: hidden;">
-        <jggl-media url="https://jggl.ai/images/app/authors-grid.webp" alt="Authorship across the user base" fit="cover"></jggl-media>
+        <jggl-media url="assets/media/authors-grid.webp" alt="Authorship across the user base" fit="cover"></jggl-media>
       </div>
     </div>
 
@@ -297,7 +297,7 @@ ${kicker('musicnote', 'Music studio')}
         <p style="margin: 0; font-size: 16.5px; line-height: 1.72; color: #8B8884; text-wrap: pretty;">A finished track is assembled 42.9% faster than in Suno. In direct comparisons with AceStep, tracks are preferred in up to 90% of cases. Users can clone their own voice or generate an instrumental.</p>
       </div>
       <div style="border-radius: 20px; background: #060606; height: 100%; min-height: clamp(220px, 30vw, 340px); width: 100%; overflow: hidden;">
-        <jggl-media url="https://jggl.ai/images/app/studio-sound.webp" alt="Music studio in the JGGL App" fit="cover"></jggl-media>
+        <jggl-media url="assets/media/studio-sound.webp" alt="Music studio in the JGGL App" fit="cover"></jggl-media>
       </div>
     </div>
   </div>
@@ -394,7 +394,7 @@ ${D.FAQ.map((f, i) => {
 const getStarted = `<section id="get-started" style="padding: var(--sp) 0 96px; scroll-margin-top: 110px;">
   <div data-reveal>
     <div style="padding: 0 clamp(20px, 3vw, 40px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; align-items: center; text-align: center;">
-      <video class="gs-media" src="https://jggl.ai/videos/hero/jin-icon-3d.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+      <video class="gs-media" src="assets/media/jin-icon-3d.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
       <span style="font-size: 18px; font-weight: 500; letter-spacing: -0.014em; color: var(--accent);">Get started</span>
       <h2 style="margin: 22px 0 0; font-size: clamp(30px, 5.6vw, 62px); line-height: 1.04; font-weight: 500; letter-spacing: -0.032em; max-width: 20ch; text-wrap: pretty;">Create. Publish. <span style="color: var(--accent);">Reach your audience.</span></h2>
       <p style="margin: 24px 0 0; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.6; color: #9A9793; max-width: 48ch; text-wrap: pretty;">A social network where publishing is available to every user. Free for the first 100,000 accounts.</p>
@@ -453,7 +453,7 @@ const modal = `<div data-modal class="modal-overlay" role="dialog" aria-modal="t
     <button class="modal-close" data-close-modal aria-label="Close" style="position: absolute; z-index: 4; top: 22px; right: 22px; width: 42px; height: 42px; border-radius: 999px; border: 1px solid #262421; background: rgba(10,10,10,0.55); backdrop-filter: blur(16px) saturate(1.2); -webkit-backdrop-filter: blur(16px) saturate(1.2); color: #E4E1DD; font-family: inherit; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color .3s ease, border-color .3s ease, background .3s ease;">✕</button>
     <div class="modal-grid" style="position: relative; z-index: 2; display: flex; flex-direction: column;">
       <div class="modal-art" style="position: relative; height: 300px; overflow: hidden; display: flex; align-items: flex-start; justify-content: center; background: #080808;">
-        <img src="https://jggl.ai/images/app/feed-mockup.webp" alt="JGGL App on iPhone" style="width: 100%; max-width: none; display: block; transform: translateY(-4%);">
+        <img src="assets/media/feed-mockup.webp" alt="JGGL App on iPhone" style="width: 100%; max-width: none; display: block; transform: translateY(-4%);">
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,12,0) 38%, #0C0C0C 100%); pointer-events: none;"></span>
       </div>
       <div class="modal-copy" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; padding: 8px clamp(28px, 5vw, 72px) clamp(44px, 5vw, 60px);">
