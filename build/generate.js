@@ -477,7 +477,9 @@ const html = `<!DOCTYPE html>
 <title>JGGL — One assistant. Every format. One workflow.</title>
 <meta name="description" content="${esc(DESC)}">
 <meta name="theme-color" content="#0A0A0A">
-<link rel="icon" href="assets/jggl-mark.png" type="image/png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=${ver('assets/favicon-32.png')}">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png?v=${ver('assets/favicon-192.png')}">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=${ver('assets/apple-touch-icon.png')}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="JGGL — One assistant. Every format. One workflow.">
 <meta property="og:description" content="${esc(DESC)}">
