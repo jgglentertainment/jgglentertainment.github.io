@@ -207,6 +207,10 @@ img { display: block; max-width: 100%; }
 .nav-link { transition: background .3s ease, color .3s ease; }
 .nav-link:hover { background: #1A1917; }
 .product-card:hover { border-color: #34322F; }
+/* Глобальное a:hover красит ссылку в акцент, а карточка продукта — это
+   ссылка целиком, из-за чего оранжевыми становились заголовки
+   «JGGL App» и «JGGL Buddy». Возвращаем обычный цвет текста. */
+.product-card:hover, .product-card:hover h3 { color: #F2F2F0; }
 .trow { transition: background .3s ease; }
 .trow:hover { background: #0E0E0E; }
 .ticker-link:hover { background: rgba(255,108,25,0.05); }
@@ -214,6 +218,26 @@ img { display: block; max-width: 100%; }
 .send-btn:active { transform: scale(0.96); }
 .modal-close:hover { color: #F2F2F0; border-color: #3A3835; background: #151413; }
 .modal-cta a:hover { border-color: #3E3B37; background: #131211; }
+
+/* Медиа в блоке Get started. Размеры и радиальная маска повторяют
+   jggl.ai: маска растворяет края ролика, поэтому его собственный тёмный
+   фон сливается с фоном страницы и подложка не видна. */
+.gs-media {
+  width: 100%;
+  max-width: min(90%, 590px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+  margin-bottom: clamp(-48px, -2.5vw, -16px);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' preserveAspectRatio='none'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.5' cy='.5' r='.5'%3E%3Cstop offset='0' stop-color='%23fff'/%3E%3Cstop offset='.45' stop-color='%23fff'/%3E%3Cstop offset='.85' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='2' seed='4' result='t'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='t' scale='12' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='512' height='512' fill='url(%23g)' filter='url(%23d)'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' preserveAspectRatio='none'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.5' cy='.5' r='.5'%3E%3Cstop offset='0' stop-color='%23fff'/%3E%3Cstop offset='.45' stop-color='%23fff'/%3E%3Cstop offset='.85' stop-color='%23fff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='2' seed='4' result='t'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='t' scale='12' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='512' height='512' fill='url(%23g)' filter='url(%23d)'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+@media (prefers-reduced-motion: reduce) { .gs-media { animation: none; } }
 
 /* Marquee/ticker pause on hover — the row is duplicated so a
    -50% translate loops seamlessly. */
